@@ -4,9 +4,11 @@
 # NAME: Wifi-Call-DE
 # DESC: Germany SIM Wi-Fi Calling / VoWiFi
 # FORMAT: Loon rule list
-# GENERATED: 2026-06-27
-# TOTAL: 5
+# REVIEWED: 2026-10-28
+# TOTAL: 6
 
+# Explicit ePDG gateway coverage; keep mnc001 from falling through to FINAL.
+DOMAIN-SUFFIX,epdg.epc.mnc001.mcc262.pub.3gppnetwork.org
 DOMAIN-SUFFIX,epdg.epc.mnc002.mcc262.pub.3gppnetwork.org
 IP-CIDR,139.7.117.168/30,no-resolve
 DOMAIN-SUFFIX,epdg.epc.mnc003.mcc262.pub.3gppnetwork.org

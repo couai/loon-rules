@@ -145,7 +145,7 @@
           "name": "Migrated existing Wifi-Call-DE.list",
           "path": "overrides/wificall/Wifi-Call-DE.list",
           "format": "loon",
-          "min_rules": 5
+          "min_rules": 6
         },
         {
           "name": "HenryChiao WiFi Calling DE",
@@ -159,7 +159,10 @@
           ]
         }
       ],
-      "preserve_source": "overrides/wificall/Wifi-Call-DE.list"
+      "preserve_source": "overrides/wificall/Wifi-Call-DE.list",
+      "required_rules": [
+        "DOMAIN-SUFFIX,epdg.epc.mnc001.mcc262.pub.3gppnetwork.org"
+      ]
     },
     "wificall/Wifi-Call-US": {
       "output": "rules/wificall/Wifi-Call-US.list",

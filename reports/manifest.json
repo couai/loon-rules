@@ -185,15 +185,15 @@
     },
     "wificall/Wifi-Call-DE": {
       "output": "rules/wificall/Wifi-Call-DE.list",
-      "rules": 21,
-      "sha256": "162dfcdfaf5466559dd57a4bff8dad61659ba38928f589ea986dc6c487e2733b",
+      "rules": 22,
+      "sha256": "6ffde082dde0c4ea63fe591eaf1e261480bfeb2580e25bc64d8f20ab03ae9658",
       "sources": [
         {
           "name": "Migrated existing Wifi-Call-DE.list",
           "source": "overrides/wificall/Wifi-Call-DE.list",
-          "parsed": 5,
-          "added": 5,
-          "rules_sha256": "123e0cbd9d00b1a5d947a279e488b88c2735b6b5d1faeaaea9d5182e8fe09cdd"
+          "parsed": 6,
+          "added": 6,
+          "rules_sha256": "fe26ba0cb543719269448248fbe8b08b5438923bb33fff76d51cedab87591c60"
         },
         {
           "name": "HenryChiao WiFi Calling DE",

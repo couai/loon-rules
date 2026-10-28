@@ -32,9 +32,12 @@
 
 - 旧 `UK.list` 的 90 条精简为 `UK-Banks.list` 的 60 条：删除 `co.uk`、Stripe、LemFi、Trading212、共享统计/验证服务等 30 条，保留银行域名、品牌关键词与原 IP 规则。Stripe 使用现有独立订阅并放在 OpenAI 前；LemFi、Trading212 使用各自独立订阅。不要同时启用新旧 UK 列表。
 - 客户端银行规则先放各服务的独立订阅，最后放 `UK-Banks.list` 作为英国银行补充（当前位于 Sumsub 后、GitHub 前），保留英国手动选择策略。当前合集与独立银行列表没有发现域名或完整规则重叠；该顺序也便于以后增加专用规则。
+
 ## 运营商范围与优先级
 
 四份 WiFi Calling 按 UK、HK、DE、US 的原顺序放在 HK-Carrier-App 前，各自保留原地区策略。这样 `wlan.three.com.hk` 先命中香港 WiFi Calling，随后 `three.com.hk` 才覆盖运营商 App。域名规则仍遵循 Loon 的类型和来源优先级，提前订阅不会使 IP 规则越过域名规则。
+
+德国列表补充 `DOMAIN-SUFFIX,epdg.epc.mnc001.mcc262.pub.3gppnetwork.org`，修复该网关原先落到 FINAL 的遗漏，继续使用德国手动策略。此项由本地补充源及 `required_rules` 保留，不扩大为匹配全部 `mcc262` 的关键词。
 
 HK-Carrier-App 保留 22 条明确域名，移除 11 个泛关键词、8 个共享服务后缀与 2 个已被父域名覆盖的子域名。MyLink 使用 `mylinkapp.hk` 及精确主机 `mylink.komect.com`，不扩大到整个 `komect.com`；依据 CMHK 的 [MySIM 文件](https://www.hk.chinamobile.com/upload/onlineshop/2026-04-15/5g-mysim-local-package-sc.pdf)和 [MyLink 活动文件](https://www.hk.chinamobile.com/upload/onlineshop/2026-01-15/tnc_slash_5G_Student_Referral_Program_115.pdf)。Appsflyer、Branch、Adjust、Crashlytics、Firebase、Google API/静态资源等共享平台交由其他规则处理。
 
