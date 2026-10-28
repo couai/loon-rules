@@ -1,0 +1,9 @@
+# Imported 2026-10-28 from https://image-1251506627.cos.ap-shanghai.myqcloud.com/loon-rules/bank/Solflare.list
+# NAME: Solflare
+# DESC: Solflare wallet service
+# FORMAT: Loon rule list
+# GENERATED: 2026-06-27
+# TOTAL: 2
+
+DOMAIN-SUFFIX,solflare.com
+DOMAIN-SUFFIX,docs.solflare.com

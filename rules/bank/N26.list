@@ -1,0 +1,14 @@
+# bank/N26 — generated; edit sources.json or overrides instead.
+# Sources and attribution: https://github.com/couai/loon-rules/blob/main/NOTICE.md
+# Rules: 11
+DOMAIN-SUFFIX,n26.com
+DOMAIN-SUFFIX,number26.de
+DOMAIN-SUFFIX,tech26.de
+DOMAIN-KEYWORD,n26
+DOMAIN-SUFFIX,idnow.de
+DOMAIN-SUFFIX,idnow.io
+DOMAIN-SUFFIX,videobit.io
+DOMAIN-SUFFIX,adjust.com
+DOMAIN-SUFFIX,salesforce.com
+DOMAIN,api.tech26.de
+DOMAIN,cdn.number26.de

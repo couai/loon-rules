@@ -1,0 +1,70 @@
+# Imported 2026-10-28 from https://image-1251506627.cos.ap-shanghai.myqcloud.com/loon-rules/wificall/Wifi-Call-US.list
+#!name=Wifi-Call-US
+#!desc=US SIM Wi-Fi Calling / VoWiFi rules for Loon
+# NAME: Wifi-Call-US
+# DESC: US SIM Wi-Fi Calling / VoWiFi, common carrier ePDG and carrier helper rules
+# FORMAT: Loon rule list
+# GENERATED: 2026-06-27
+# TOTAL: 48
+
+# UDP 500/4500 for US IPsec Wi-Fi Calling
+AND,((GEOIP,US),(AND,((PROTOCOL,UDP),(OR,((DEST-PORT,500),(DEST-PORT,4500))))))
+
+# Generic US MCC
+DOMAIN-KEYWORD,mcc310
+DOMAIN-KEYWORD,mcc311
+DOMAIN-KEYWORD,mcc312
+DOMAIN-KEYWORD,mcc313
+DOMAIN-KEYWORD,mcc314
+DOMAIN-KEYWORD,mcc315
+DOMAIN-KEYWORD,mcc316
+
+# T-Mobile US
+DOMAIN-SUFFIX,epdg.epc.mnc260.mcc310.pub.3gppnetwork.org
+DOMAIN-SUFFIX,ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org
+DOMAIN-SUFFIX,ss.epdg.epc.geo.mnc260.mcc310.pub.3gppnetwork.org
+DOMAIN-KEYWORD,t-mobile
+DOMAIN-SUFFIX,ultramobile.com
+DOMAIN-SUFFIX,redirect.ultra.me
+DOMAIN-SUFFIX,mvnoc.ai
+DOMAIN-SUFFIX,mzstatic.com
+DOMAIN-SUFFIX,optimizely.com
+IP-CIDR,66.94.0.0/19,no-resolve
+IP-CIDR,206.29.177.36/32,no-resolve
+IP-CIDR,208.54.0.0/16,no-resolve
+
+# AT&T US
+DOMAIN-SUFFIX,epdg.epc.mnc410.mcc310.pub.3gppnetwork.org
+DOMAIN-SUFFIX,ss.epdg.epc.mnc410.mcc310.pub.3gppnetwork.org
+DOMAIN-SUFFIX,ss.epdg.epc.geo.mnc410.mcc310.pub.3gppnetwork.org
+DOMAIN-SUFFIX,att.com
+DOMAIN-SUFFIX,att.net
+IP-CIDR,107.64.0.0/10,no-resolve
+
+# Verizon US
+DOMAIN-SUFFIX,epdg.epc.mnc480.mcc311.pub.3gppnetwork.org
+DOMAIN-SUFFIX,ss.epdg.epc.mnc480.mcc311.pub.3gppnetwork.org
+DOMAIN-SUFFIX,ss.epdg.epc.geo.mnc480.mcc311.pub.3gppnetwork.org
+
+# Sprint / legacy US
+DOMAIN-SUFFIX,epdg.epc.mnc120.mcc310.pub.3gppnetwork.org
+DOMAIN-SUFFIX,ss.epdg.epc.mnc120.mcc310.pub.3gppnetwork.org
+DOMAIN-SUFFIX,ss.epdg.epc.geo.mnc120.mcc310.pub.3gppnetwork.org
+
+# App/auth/measurement helpers seen in public US Wi-Fi Calling drafts
+DOMAIN-SUFFIX,mobilefuse.com
+DOMAIN-SUFFIX,inmobi.com
+DOMAIN-SUFFIX,crashlytics.com
+DOMAIN-SUFFIX,talkatone.com
+DOMAIN-SUFFIX,kochava.com
+DOMAIN-SUFFIX,tktn.be
+DOMAIN-SUFFIX,tktn.at
+DOMAIN-SUFFIX,cohere.com
+DOMAIN-SUFFIX,ip-api.com
+DOMAIN-SUFFIX,agkn.com
+DOMAIN-SUFFIX,inner-active.mobi
+IP-CIDR,50.117.27.0/24,no-resolve
+IP-CIDR,69.46.75.0/24,no-resolve
+IP-CIDR,205.164.56.0/24,no-resolve
+IP-CIDR,63.251.124.0/24,no-resolve
+IP-CIDR,216.172.154.0/24,no-resolve

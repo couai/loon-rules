@@ -64,6 +64,458 @@
         "DOMAIN-SUFFIX,claude.ai",
         "DOMAIN-SUFFIX,chatgpt.com"
       ]
+    },
+    "bank/UK": {
+      "output": "rules/bank/UK.list",
+      "sources": [
+        {
+          "name": "Migrated existing UK.list",
+          "path": "snapshots/UK-Banks-20261028.list",
+          "format": "loon",
+          "min_rules": 92
+        },
+        {
+          "name": "iniwex5 UK banking",
+          "url": "https://raw.githubusercontent.com/iniwex5/tools/main/rules/UK.list",
+          "format": "loon",
+          "min_rules": 50
+        }
+      ],
+      "preserve_source": "snapshots/UK-Banks-20261028.list"
+    },
+    "carrier/HK-Carrier-App": {
+      "output": "rules/carrier/HK-Carrier-App.list",
+      "sources": [
+        {
+          "name": "Migrated existing HK-Carrier-App.list",
+          "path": "overrides/carrier/HK-Carrier-App.list",
+          "format": "loon",
+          "min_rules": 41
+        }
+      ],
+      "preserve_source": "overrides/carrier/HK-Carrier-App.list"
+    },
+    "wificall/Wifi-Call-UK": {
+      "output": "rules/wificall/Wifi-Call-UK.list",
+      "sources": [
+        {
+          "name": "Migrated existing Wifi-Call-UK.list",
+          "path": "overrides/wificall/Wifi-Call-UK.list",
+          "format": "loon",
+          "min_rules": 17
+        },
+        {
+          "name": "HenryChiao WiFi Calling UK",
+          "url": "https://raw.githubusercontent.com/HenryChiao/the_clash_ruleset/main/The_Location_rule-set/Wi-Fi_Calling_rule-set/wificalling-uk.list",
+          "format": "loon",
+          "min_rules": 10,
+          "exclude_lines": [
+            "DOMAIN-SUFFIX,epdg.epc.mnc001.mcc230.pub.3gppnetwork.org",
+            "IP-CIDR,62.141.11.56/24,no-resolve"
+          ]
+        }
+      ],
+      "preserve_source": "overrides/wificall/Wifi-Call-UK.list"
+    },
+    "wificall/Wifi-Call-HK": {
+      "output": "rules/wificall/Wifi-Call-HK.list",
+      "sources": [
+        {
+          "name": "Migrated existing Wifi-Call-HK.list",
+          "path": "overrides/wificall/Wifi-Call-HK.list",
+          "format": "loon",
+          "min_rules": 9
+        },
+        {
+          "name": "HenryChiao WiFi Calling HK",
+          "url": "https://raw.githubusercontent.com/HenryChiao/the_clash_ruleset/main/The_Location_rule-set/Wi-Fi_Calling_rule-set/wificalling-hk.list",
+          "format": "loon",
+          "min_rules": 10
+        }
+      ],
+      "preserve_source": "overrides/wificall/Wifi-Call-HK.list"
+    },
+    "wificall/Wifi-Call-DE": {
+      "output": "rules/wificall/Wifi-Call-DE.list",
+      "sources": [
+        {
+          "name": "Migrated existing Wifi-Call-DE.list",
+          "path": "overrides/wificall/Wifi-Call-DE.list",
+          "format": "loon",
+          "min_rules": 5
+        },
+        {
+          "name": "HenryChiao WiFi Calling DE",
+          "url": "https://raw.githubusercontent.com/HenryChiao/the_clash_ruleset/main/The_Location_rule-set/Wi-Fi_Calling_rule-set/wificalling-de.list",
+          "format": "loon",
+          "min_rules": 10,
+          "exclude_lines": [
+            "DOMAIN-SUFFIX,n26.com",
+            "DOMAIN-SUFFIX,support.n26.com",
+            "DOMAIN-SUFFIX,tech26.de"
+          ]
+        }
+      ],
+      "preserve_source": "overrides/wificall/Wifi-Call-DE.list"
+    },
+    "wificall/Wifi-Call-US": {
+      "output": "rules/wificall/Wifi-Call-US.list",
+      "sources": [
+        {
+          "name": "Migrated existing Wifi-Call-US.list",
+          "path": "overrides/wificall/Wifi-Call-US.list",
+          "format": "loon",
+          "min_rules": 48
+        },
+        {
+          "name": "HenryChiao WiFi Calling US",
+          "url": "https://raw.githubusercontent.com/HenryChiao/the_clash_ruleset/main/The_Location_rule-set/Wi-Fi_Calling_rule-set/wificalling-us.list",
+          "format": "loon",
+          "min_rules": 10
+        }
+      ],
+      "preserve_source": "overrides/wificall/Wifi-Call-US.list"
+    },
+    "bank/N26": {
+      "output": "rules/bank/N26.list",
+      "sources": [
+        {
+          "name": "Migrated existing N26.list",
+          "path": "overrides/bank/N26.list",
+          "format": "loon",
+          "min_rules": 9
+        },
+        {
+          "name": "xOS N26 (explicit domains)",
+          "url": "https://raw.githubusercontent.com/xOS/Config/Her/RuleSet/N26.list",
+          "format": "loon",
+          "min_rules": 3,
+          "include_rule_types": [
+            "DOMAIN",
+            "DOMAIN-SUFFIX"
+          ]
+        }
+      ],
+      "preserve_source": "overrides/bank/N26.list"
+    },
+    "bank/Kraken": {
+      "output": "rules/bank/Kraken.list",
+      "sources": [
+        {
+          "name": "Migrated existing Kraken.list",
+          "path": "overrides/bank/Kraken.list",
+          "format": "loon",
+          "min_rules": 8
+        },
+        {
+          "name": "MetaCubeX Kraken",
+          "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/kraken.list",
+          "format": "domain-list",
+          "min_rules": 1
+        }
+      ],
+      "preserve_source": "overrides/bank/Kraken.list"
+    },
+    "bank/Coinbase": {
+      "output": "rules/bank/Coinbase.list",
+      "sources": [
+        {
+          "name": "Migrated existing Coinbase.list",
+          "path": "overrides/bank/Coinbase.list",
+          "format": "loon",
+          "min_rules": 7
+        },
+        {
+          "name": "LeiyuG Coinbase (service-specific domains)",
+          "url": "https://raw.githubusercontent.com/LeiyuG/Surge/main/rules/Coinbase.list",
+          "format": "loon",
+          "min_rules": 4,
+          "include_rule_types": [
+            "DOMAIN",
+            "DOMAIN-SUFFIX"
+          ],
+          "include_domains": [
+            "asset-metadata-service-production.s3.amazonaws.com",
+            "coinbase.com",
+            "coinbasecdn.net",
+            "cb-device-intelligence.com",
+            "walletlink.org"
+          ]
+        }
+      ],
+      "preserve_source": "overrides/bank/Coinbase.list"
+    },
+    "bank/PayPal": {
+      "output": "rules/bank/PayPal.list",
+      "sources": [
+        {
+          "name": "Migrated existing PayPal.list",
+          "path": "overrides/bank/PayPal.list",
+          "format": "loon",
+          "min_rules": 5
+        },
+        {
+          "name": "blackmatrix7 PayPal (reviewed service domains)",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/PayPal/PayPal.list",
+          "format": "loon",
+          "min_rules": 10,
+          "include_rule_types": [
+            "DOMAIN",
+            "DOMAIN-SUFFIX"
+          ],
+          "include_domains": [
+            "paypal.com",
+            "paypal.me",
+            "paypalobjects.com",
+            "paypal-mktg.com",
+            "paypal-community.com",
+            "paypalcommunity.com",
+            "paypalcorp.com",
+            "paypalinc.com",
+            "paypalcredit.com",
+            "paypalcreditcard.com",
+            "paypalgivingfund.org",
+            "paypalhere.com",
+            "paypalstatus.com",
+            "pypl.com",
+            "braintreegateway.com",
+            "braintreepayments.com",
+            "braintreepaymentsolutions.com",
+            "braintreeps.com",
+            "getbraintree.com"
+          ]
+        }
+      ],
+      "preserve_source": "overrides/bank/PayPal.list"
+    },
+    "bank/OKX": {
+      "output": "rules/bank/OKX.list",
+      "sources": [
+        {
+          "name": "Migrated existing OKX.list",
+          "path": "overrides/bank/OKX.list",
+          "format": "loon",
+          "min_rules": 16
+        },
+        {
+          "name": "blackmatrix7 OKX",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/OKX/OKX.list",
+          "format": "loon",
+          "min_rules": 3
+        }
+      ],
+      "preserve_source": "overrides/bank/OKX.list"
+    },
+    "bank/Bitget": {
+      "output": "rules/bank/Bitget.list",
+      "sources": [
+        {
+          "name": "Migrated existing Bitget.list",
+          "path": "overrides/bank/Bitget.list",
+          "format": "loon",
+          "min_rules": 4
+        },
+        {
+          "name": "LeiyuG Bitget (service-specific domains)",
+          "url": "https://raw.githubusercontent.com/LeiyuG/Surge/main/rules/Bitget.list",
+          "format": "loon",
+          "min_rules": 5,
+          "include_rule_types": [
+            "DOMAIN",
+            "DOMAIN-SUFFIX"
+          ],
+          "include_domains": [
+            "h1dz7f.cdn-settings.appsflyersdk.com",
+            "bgstatic.com",
+            "bitget.com",
+            "bitgetapp.com",
+            "bitgetapps.com",
+            "bitgetimg.com",
+            "krbitget.com"
+          ]
+        }
+      ],
+      "preserve_source": "overrides/bank/Bitget.list"
+    },
+    "bank/Bybit": {
+      "output": "rules/bank/Bybit.list",
+      "sources": [
+        {
+          "name": "Migrated existing Bybit.list",
+          "path": "overrides/bank/Bybit.list",
+          "format": "loon",
+          "min_rules": 15
+        }
+      ],
+      "preserve_source": "overrides/bank/Bybit.list"
+    },
+    "bank/Bybit-EU": {
+      "output": "rules/bank/Bybit-EU.list",
+      "sources": [
+        {
+          "name": "Migrated existing Bybit-EU.list",
+          "path": "overrides/bank/Bybit-EU.list",
+          "format": "loon",
+          "min_rules": 5
+        }
+      ],
+      "preserve_source": "overrides/bank/Bybit-EU.list"
+    },
+    "bank/Nexo": {
+      "output": "rules/bank/Nexo.list",
+      "sources": [
+        {
+          "name": "Migrated existing Nexo.list",
+          "path": "overrides/bank/Nexo.list",
+          "format": "loon",
+          "min_rules": 4
+        }
+      ],
+      "preserve_source": "overrides/bank/Nexo.list"
+    },
+    "bank/RedotPay": {
+      "output": "rules/bank/RedotPay.list",
+      "sources": [
+        {
+          "name": "Migrated existing RedotPay.list",
+          "path": "overrides/bank/RedotPay.list",
+          "format": "loon",
+          "min_rules": 3
+        }
+      ],
+      "preserve_source": "overrides/bank/RedotPay.list"
+    },
+    "bank/TevauPay": {
+      "output": "rules/bank/TevauPay.list",
+      "sources": [
+        {
+          "name": "Migrated existing TevauPay.list",
+          "path": "overrides/bank/TevauPay.list",
+          "format": "loon",
+          "min_rules": 3
+        }
+      ],
+      "preserve_source": "overrides/bank/TevauPay.list"
+    },
+    "bank/dtcpay": {
+      "output": "rules/bank/dtcpay.list",
+      "sources": [
+        {
+          "name": "Migrated existing dtcpay.list",
+          "path": "overrides/bank/dtcpay.list",
+          "format": "loon",
+          "min_rules": 1
+        }
+      ],
+      "preserve_source": "overrides/bank/dtcpay.list"
+    },
+    "bank/LemFi": {
+      "output": "rules/bank/LemFi.list",
+      "sources": [
+        {
+          "name": "Migrated existing LemFi.list",
+          "path": "overrides/bank/LemFi.list",
+          "format": "loon",
+          "min_rules": 4
+        }
+      ],
+      "preserve_source": "overrides/bank/LemFi.list"
+    },
+    "bank/Trading212": {
+      "output": "rules/bank/Trading212.list",
+      "sources": [
+        {
+          "name": "Migrated existing Trading212.list",
+          "path": "overrides/bank/Trading212.list",
+          "format": "loon",
+          "min_rules": 3
+        }
+      ],
+      "preserve_source": "overrides/bank/Trading212.list"
+    },
+    "bank/Maya": {
+      "output": "rules/bank/Maya.list",
+      "sources": [
+        {
+          "name": "Migrated existing Maya.list",
+          "path": "overrides/bank/Maya.list",
+          "format": "loon",
+          "min_rules": 4
+        }
+      ],
+      "preserve_source": "overrides/bank/Maya.list"
+    },
+    "bank/Solflare": {
+      "output": "rules/bank/Solflare.list",
+      "sources": [
+        {
+          "name": "Migrated existing Solflare.list",
+          "path": "overrides/bank/Solflare.list",
+          "format": "loon",
+          "min_rules": 2
+        }
+      ],
+      "preserve_source": "overrides/bank/Solflare.list"
+    },
+    "bank/EtherFi": {
+      "output": "rules/bank/EtherFi.list",
+      "sources": [
+        {
+          "name": "Migrated existing EtherFi.list",
+          "path": "overrides/bank/EtherFi.list",
+          "format": "loon",
+          "min_rules": 3
+        }
+      ],
+      "preserve_source": "overrides/bank/EtherFi.list"
+    },
+    "bank/Plasma": {
+      "output": "rules/bank/Plasma.list",
+      "sources": [
+        {
+          "name": "Migrated existing Plasma.list",
+          "path": "overrides/bank/Plasma.list",
+          "format": "loon",
+          "min_rules": 4
+        }
+      ],
+      "preserve_source": "overrides/bank/Plasma.list"
+    },
+    "bank/UR": {
+      "output": "rules/bank/UR.list",
+      "sources": [
+        {
+          "name": "Migrated existing UR.list",
+          "path": "overrides/bank/UR.list",
+          "format": "loon",
+          "min_rules": 1
+        }
+      ],
+      "preserve_source": "overrides/bank/UR.list"
+    },
+    "bank/YPT": {
+      "output": "rules/bank/YPT.list",
+      "sources": [
+        {
+          "name": "Migrated existing YPT.list",
+          "path": "overrides/bank/YPT.list",
+          "format": "loon",
+          "min_rules": 3
+        }
+      ],
+      "preserve_source": "overrides/bank/YPT.list"
+    },
+    "bank/Sumsub": {
+      "output": "rules/bank/Sumsub.list",
+      "sources": [
+        {
+          "name": "Migrated existing Sumsub.list",
+          "path": "overrides/bank/Sumsub.list",
+          "format": "loon",
+          "min_rules": 5
+        }
+      ],
+      "preserve_source": "overrides/bank/Sumsub.list"
     }
   }
 }

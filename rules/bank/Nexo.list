@@ -1,0 +1,7 @@
+# bank/Nexo — generated; edit sources.json or overrides instead.
+# Sources and attribution: https://github.com/couai/loon-rules/blob/main/NOTICE.md
+# Rules: 4
+DOMAIN-SUFFIX,nexo.com
+DOMAIN-SUFFIX,nexo.net
+DOMAIN-SUFFIX,nexo.io
+DOMAIN-KEYWORD,nexo

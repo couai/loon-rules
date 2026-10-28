@@ -1,0 +1,12 @@
+# Imported 2026-10-28 from https://image-1251506627.cos.ap-shanghai.myqcloud.com/loon-rules/bank/TevauPay.list
+# NAME: TevauPay
+# DESC: TevauPay service
+# FORMAT: Loon rule list
+# GENERATED: 2026-06-27 v2
+# TOTAL: 3
+
+DOMAIN-SUFFIX,tevau.io
+DOMAIN-SUFFIX,tevau.co
+DOMAIN-KEYWORD,tevau
+# LOW-CONFIDENCE/PARKED-LIKE:
+# DOMAIN-SUFFIX,tevau.com

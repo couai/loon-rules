@@ -1,0 +1,6 @@
+# bank/Trading212 — generated; edit sources.json or overrides instead.
+# Sources and attribution: https://github.com/couai/loon-rules/blob/main/NOTICE.md
+# Rules: 3
+DOMAIN-SUFFIX,trading212.com
+DOMAIN-SUFFIX,appsflyersdk.com
+DOMAIN-KEYWORD,trading212

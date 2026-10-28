@@ -1,0 +1,39 @@
+# Imported 2026-10-28 from https://image-1251506627.cos.ap-shanghai.myqcloud.com/loon-rules/wificall/Wifi-Call-UK.list
+#!name=Wifi-Call-UK
+#!desc=UK SIM Wi-Fi Calling / VoWiFi rules for Loon
+# NAME: Wifi-Call-UK
+# DESC: UK SIM Wi-Fi Calling / VoWiFi, merged and deduplicated
+# FORMAT: Loon rule list
+# GENERATED: 2026-06-27
+# TOTAL: 17
+
+# Apple / region check
+DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
+
+# UDP 500/4500 for UK IPsec Wi-Fi Calling
+AND,((GEOIP,GB),(AND,((PROTOCOL,UDP),(OR,((DEST-PORT,500),(DEST-PORT,4500))))))
+
+# Generic UK 3GPP / MCC
+DOMAIN-KEYWORD,mcc234
+
+# Vodafone UK
+DOMAIN-SUFFIX,entsrv-uk.vodafone.com
+DOMAIN-SUFFIX,vuk-gto.prod.ondemandconnectivity.com
+DOMAIN-SUFFIX,epdg.epc.mnc015.mcc234.pub.3gppnetwork.org
+DOMAIN-SUFFIX,ss.epdg.epc.mnc015.mcc234.pub.3gppnetwork.org
+DOMAIN-SUFFIX,ss.epdg.epc.geo.mnc015.mcc234.pub.3gppnetwork.org
+IP-CIDR,88.82.0.0/19,no-resolve
+IP-CIDR,148.252.160.0/19,no-resolve
+
+# VOXI
+DOMAIN,vfgb.idemia.io
+
+# CMLink UK / EE
+DOMAIN-SUFFIX,ee.co.uk
+DOMAIN-SUFFIX,ct.ee.co.uk
+IP-CIDR,46.68.0.0/17,no-resolve
+IP-CIDR,31.94.0.0/16,no-resolve
+
+# Giffgaff
+DOMAIN-SUFFIX,giffgaff.com
+IP-CIDR,87.194.0.0/16,no-resolve

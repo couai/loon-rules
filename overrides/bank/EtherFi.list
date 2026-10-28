@@ -1,0 +1,12 @@
+# Imported 2026-10-28 from https://image-1251506627.cos.ap-shanghai.myqcloud.com/loon-rules/bank/EtherFi.list
+# NAME: ether.fi
+# DESC: ether.fi service draft
+# FORMAT: Loon rule list
+# GENERATED: 2026-06-27 v2
+# TOTAL: 3
+
+DOMAIN-SUFFIX,ether.fi
+DOMAIN-SUFFIX,app.ether.fi
+DOMAIN-SUFFIX,etherfi.gitbook.io
+# LOW-CONFIDENCE/DNS-FAILED; likely Android package id, not domain:
+# DOMAIN-SUFFIX,etherfi.app

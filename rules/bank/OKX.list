@@ -1,0 +1,19 @@
+# bank/OKX — generated; edit sources.json or overrides instead.
+# Sources and attribution: https://github.com/couai/loon-rules/blob/main/NOTICE.md
+# Rules: 16
+DOMAIN-SUFFIX,okx.com
+DOMAIN-SUFFIX,okex.com
+DOMAIN-SUFFIX,okx-dns.com
+DOMAIN-KEYWORD,okx
+DOMAIN-SUFFIX,okcdn.com
+DOMAIN-SUFFIX,okimgs.com
+DOMAIN-SUFFIX,oklink.com
+DOMAIN-SUFFIX,okg.com
+DOMAIN-SUFFIX,geetest.com
+DOMAIN,api.amplitudeexperiment.com
+DOMAIN,api.onesignal.com
+DOMAIN,www.okx.com.cdn.cloudflare.net
+DOMAIN-KEYWORD,d1nil3qbkxfj92
+DOMAIN-KEYWORD,d1w1p0smpsoh5j
+DOMAIN-KEYWORD,d2p7qknqur0nu9
+DOMAIN-KEYWORD,ipyp0a

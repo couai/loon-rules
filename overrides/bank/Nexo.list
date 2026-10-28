@@ -1,0 +1,11 @@
+# Imported 2026-10-28 from https://image-1251506627.cos.ap-shanghai.myqcloud.com/loon-rules/bank/Nexo.list
+# NAME: Nexo
+# DESC: Nexo service
+# FORMAT: Loon rule list
+# GENERATED: 2026-06-27 v2
+# TOTAL: 4
+
+DOMAIN-SUFFIX,nexo.com
+DOMAIN-SUFFIX,nexo.net
+DOMAIN-SUFFIX,nexo.io
+DOMAIN-KEYWORD,nexo

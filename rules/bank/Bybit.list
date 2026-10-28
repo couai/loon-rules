@@ -1,0 +1,18 @@
+# bank/Bybit — generated; edit sources.json or overrides instead.
+# Sources and attribution: https://github.com/couai/loon-rules/blob/main/NOTICE.md
+# Rules: 15
+DOMAIN-SUFFIX,bybit.com
+DOMAIN-SUFFIX,www.bybit.com
+DOMAIN-SUFFIX,sg.bybit.com
+DOMAIN-SUFFIX,bybit.biz
+DOMAIN-SUFFIX,bybit.cloud
+DOMAIN-SUFFIX,bybitglobal.com
+DOMAIN-SUFFIX,bybit-global.com
+DOMAIN-SUFFIX,bytick.com
+DOMAIN,bybit.ada.support
+DOMAIN,bybit-exchange.github.io
+DOMAIN-SUFFIX,api.bitverse.zone
+DOMAIN-SUFFIX,inapps.appsflyer.com
+DOMAIN-SUFFIX,arkoselabs.com
+DOMAIN-KEYWORD,bybit
+DOMAIN-KEYWORD,bitverse

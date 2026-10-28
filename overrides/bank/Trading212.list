@@ -1,0 +1,10 @@
+# Imported 2026-10-28 from https://image-1251506627.cos.ap-shanghai.myqcloud.com/loon-rules/bank/Trading212.list
+# NAME: Trading212
+# DESC: Trading 212 broker service
+# FORMAT: Loon rule list
+# GENERATED: 2026-06-27
+# TOTAL: 3
+
+DOMAIN-SUFFIX,trading212.com
+DOMAIN-SUFFIX,appsflyersdk.com
+DOMAIN-KEYWORD,trading212

@@ -1,0 +1,18 @@
+# Imported 2026-10-28 from https://image-1251506627.cos.ap-shanghai.myqcloud.com/loon-rules/bank/Kraken.list
+# NAME: Kraken
+# DESC: Kraken exchange and auth helper services
+# FORMAT: Loon rule list
+# GENERATED: 2026-06-27 v2
+# TOTAL: 8
+
+DOMAIN-SUFFIX,kraken.com
+DOMAIN-SUFFIX,krakenfutures.com
+DOMAIN-SUFFIX,status.kraken.com
+DOMAIN-SUFFIX,kraken.zendesk.com
+DOMAIN-KEYWORD,kraken
+DOMAIN-SUFFIX,cryptowat.ch
+DOMAIN-SUFFIX,arkoselabs.com
+DOMAIN-SUFFIX,hcaptcha.com
+# LOW-CONFIDENCE/DNS-FAILED:
+# DOMAIN-SUFFIX,krakencdn.com
+# DOMAIN-SUFFIX,krakenstatus.com

@@ -1,0 +1,18 @@
+# Imported 2026-10-28 from https://image-1251506627.cos.ap-shanghai.myqcloud.com/loon-rules/bank/N26.list
+# NAME: N26
+# DESC: N26 bank and verification services
+# FORMAT: Loon rule list
+# GENERATED: 2026-06-27 v2
+# TOTAL: 9
+
+DOMAIN-SUFFIX,n26.com
+DOMAIN-SUFFIX,number26.de
+DOMAIN-SUFFIX,tech26.de
+DOMAIN-KEYWORD,n26
+DOMAIN-SUFFIX,idnow.de
+DOMAIN-SUFFIX,idnow.io
+DOMAIN-SUFFIX,videobit.io
+DOMAIN-SUFFIX,adjust.com
+DOMAIN-SUFFIX,salesforce.com
+# LOW-CONFIDENCE/DNS-FAILED:
+# DOMAIN-SUFFIX,n26.net

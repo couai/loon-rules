@@ -101,6 +101,716 @@
           "rules_sha256": "7083d7c0bb71df94074031a9ce6f7f99c0e63015dc4d785d4fcb8b3a1653290f"
         }
       ]
+    },
+    "bank/UK": {
+      "output": "rules/bank/UK.list",
+      "rules": 90,
+      "sha256": "805b57f6b51a69c254121db369249b513a584c547df4c5b9d972aacbea50ebd5",
+      "sources": [
+        {
+          "name": "Migrated existing UK.list",
+          "source": "snapshots/UK-Banks-20261028.list",
+          "parsed": 92,
+          "added": 90,
+          "rules_sha256": "03e5ab7ca31dbeec0ad45b6cc5576e81c7f020209ad747e6d30e3b672335e94e"
+        },
+        {
+          "name": "iniwex5 UK banking",
+          "source": "https://raw.githubusercontent.com/iniwex5/tools/main/rules/UK.list",
+          "parsed": 92,
+          "added": 0,
+          "rules_sha256": "03e5ab7ca31dbeec0ad45b6cc5576e81c7f020209ad747e6d30e3b672335e94e"
+        }
+      ]
+    },
+    "carrier/HK-Carrier-App": {
+      "output": "rules/carrier/HK-Carrier-App.list",
+      "rules": 41,
+      "sha256": "4cd30d5eeef6097e66f0468b9aeabb75b94ceda9f77130caa3f371674097e1bb",
+      "sources": [
+        {
+          "name": "Migrated existing HK-Carrier-App.list",
+          "source": "overrides/carrier/HK-Carrier-App.list",
+          "parsed": 41,
+          "added": 41,
+          "rules_sha256": "69bcc7adb10f80943672ad1ab74bc7f51aa5927ec2aafa94f9445d22feb4bcab"
+        }
+      ]
+    },
+    "wificall/Wifi-Call-UK": {
+      "output": "rules/wificall/Wifi-Call-UK.list",
+      "rules": 33,
+      "sha256": "85c19e6771bd9e9047c76a28fa5038e57f4991c08c470178da6a1ab40de128b5",
+      "sources": [
+        {
+          "name": "Migrated existing Wifi-Call-UK.list",
+          "source": "overrides/wificall/Wifi-Call-UK.list",
+          "parsed": 17,
+          "added": 17,
+          "rules_sha256": "8d814b08f9e9e3b6735f586b874ade105773d6c19aaab8119d2cd2f6ce51db7b"
+        },
+        {
+          "name": "HenryChiao WiFi Calling UK",
+          "source": "https://raw.githubusercontent.com/HenryChiao/the_clash_ruleset/main/The_Location_rule-set/Wi-Fi_Calling_rule-set/wificalling-uk.list",
+          "parsed": 26,
+          "added": 16,
+          "rules_sha256": "09e54958d8049e440b65ee23e07279cdcf46366b31bca656f8c21d4206f4eb78",
+          "skipped": {
+            "DOMAIN-SUFFIX,epdg.epc.mnc001.mcc230.pub.3gppnetwork.org": "explicit source exclusion",
+            "IP-CIDR,62.141.11.56/24,no-resolve": "explicit source exclusion"
+          }
+        }
+      ]
+    },
+    "wificall/Wifi-Call-HK": {
+      "output": "rules/wificall/Wifi-Call-HK.list",
+      "rules": 18,
+      "sha256": "e03eca4c2bde48a3b74df7b56de07f22602da3ee8ea422a652315e6c8e890e13",
+      "sources": [
+        {
+          "name": "Migrated existing Wifi-Call-HK.list",
+          "source": "overrides/wificall/Wifi-Call-HK.list",
+          "parsed": 9,
+          "added": 9,
+          "rules_sha256": "ce9010325f3bb99b85ac3423b89495ffe833ea096a238719e70d6038e638f36a"
+        },
+        {
+          "name": "HenryChiao WiFi Calling HK",
+          "source": "https://raw.githubusercontent.com/HenryChiao/the_clash_ruleset/main/The_Location_rule-set/Wi-Fi_Calling_rule-set/wificalling-hk.list",
+          "parsed": 16,
+          "added": 9,
+          "rules_sha256": "f15e1add08f0cf77930cabbdd962d3b70c96d675a8763fbdf608e3bfd6a58f27"
+        }
+      ]
+    },
+    "wificall/Wifi-Call-DE": {
+      "output": "rules/wificall/Wifi-Call-DE.list",
+      "rules": 21,
+      "sha256": "162dfcdfaf5466559dd57a4bff8dad61659ba38928f589ea986dc6c487e2733b",
+      "sources": [
+        {
+          "name": "Migrated existing Wifi-Call-DE.list",
+          "source": "overrides/wificall/Wifi-Call-DE.list",
+          "parsed": 5,
+          "added": 5,
+          "rules_sha256": "123e0cbd9d00b1a5d947a279e488b88c2735b6b5d1faeaaea9d5182e8fe09cdd"
+        },
+        {
+          "name": "HenryChiao WiFi Calling DE",
+          "source": "https://raw.githubusercontent.com/HenryChiao/the_clash_ruleset/main/The_Location_rule-set/Wi-Fi_Calling_rule-set/wificalling-de.list",
+          "parsed": 20,
+          "added": 16,
+          "rules_sha256": "5b27bdfa98af76115d5a065a94b732de34782a16caeac2873812d69541b772e0",
+          "skipped": {
+            "DOMAIN-SUFFIX,n26.com": "explicit source exclusion",
+            "DOMAIN-SUFFIX,support.n26.com": "explicit source exclusion",
+            "DOMAIN-SUFFIX,tech26.de": "explicit source exclusion"
+          }
+        }
+      ]
+    },
+    "wificall/Wifi-Call-US": {
+      "output": "rules/wificall/Wifi-Call-US.list",
+      "rules": 61,
+      "sha256": "e9aecd88421358dd15b0ae85fa9d0de77c15e7758b4d33c2a6b08800660ca8c8",
+      "sources": [
+        {
+          "name": "Migrated existing Wifi-Call-US.list",
+          "source": "overrides/wificall/Wifi-Call-US.list",
+          "parsed": 48,
+          "added": 48,
+          "rules_sha256": "0a62ec28be8f7d5d92ebbd359bb02b68864a164be616607edff6e6505d053165"
+        },
+        {
+          "name": "HenryChiao WiFi Calling US",
+          "source": "https://raw.githubusercontent.com/HenryChiao/the_clash_ruleset/main/The_Location_rule-set/Wi-Fi_Calling_rule-set/wificalling-us.list",
+          "parsed": 24,
+          "added": 13,
+          "rules_sha256": "3bb6e3dcbd15e24c9b3a6be104125246933f47db85499262491e342e10435ab0"
+        }
+      ]
+    },
+    "bank/N26": {
+      "output": "rules/bank/N26.list",
+      "rules": 11,
+      "sha256": "283e066cbe96ccfd4e79d21e1712de7d110247a7cf348219017c58348209a7f3",
+      "sources": [
+        {
+          "name": "Migrated existing N26.list",
+          "source": "overrides/bank/N26.list",
+          "parsed": 9,
+          "added": 9,
+          "rules_sha256": "8fc13af6d8e54b70be5275e14ab66741074a59b8f10b9208df919fa5fca6ee98"
+        },
+        {
+          "name": "xOS N26 (explicit domains)",
+          "source": "https://raw.githubusercontent.com/xOS/Config/Her/RuleSet/N26.list",
+          "parsed": 5,
+          "added": 2,
+          "rules_sha256": "2fb86ccb08088be6659812dd6b38a51858a99092136958ff551a3090d7c0ce80",
+          "skipped": {
+            "DOMAIN-WILDCARD,*26.de": "rule type outside source selection"
+          }
+        }
+      ]
+    },
+    "bank/Kraken": {
+      "output": "rules/bank/Kraken.list",
+      "rules": 9,
+      "sha256": "18b4735db23df38c43158de625e69a40dc1e053331547b21c68a3aaecedfae4f",
+      "sources": [
+        {
+          "name": "Migrated existing Kraken.list",
+          "source": "overrides/bank/Kraken.list",
+          "parsed": 8,
+          "added": 8,
+          "rules_sha256": "86d4a5807d86175f5280f3b038e3d507476d95dc36b900c669ac79b16e49c17a"
+        },
+        {
+          "name": "MetaCubeX Kraken",
+          "source": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/kraken.list",
+          "parsed": 2,
+          "added": 1,
+          "rules_sha256": "57c783f0be5f0ed282c88ad9267465426361558f3e3650313572f5bfab4456c6"
+        }
+      ]
+    },
+    "bank/Coinbase": {
+      "output": "rules/bank/Coinbase.list",
+      "rules": 11,
+      "sha256": "70433e7076f0ff309b2dd727cd7468fa6b524cbfc527bff57ea6038e35348804",
+      "sources": [
+        {
+          "name": "Migrated existing Coinbase.list",
+          "source": "overrides/bank/Coinbase.list",
+          "parsed": 7,
+          "added": 7,
+          "rules_sha256": "01cd1586eca2553e6016d306b23e7a0e61d380ef5bedded4676ee8a6c8371e72"
+        },
+        {
+          "name": "LeiyuG Coinbase (service-specific domains)",
+          "source": "https://raw.githubusercontent.com/LeiyuG/Surge/main/rules/Coinbase.list",
+          "parsed": 5,
+          "added": 4,
+          "rules_sha256": "dd47a6e3d0cf9475d8692033f663e6f622696229598a6052b66fa31958804893",
+          "skipped": {
+            "DOMAIN-SUFFIX,app-analytics-services.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,sardine.ai": "domain outside reviewed source selection",
+            "DOMAIN-KEYWORD,coinbase": "rule type outside source selection"
+          }
+        }
+      ]
+    },
+    "bank/PayPal": {
+      "output": "rules/bank/PayPal.list",
+      "rules": 19,
+      "sha256": "1ba2be3da3320dfd941ed8f56a829b3ebe7262103f7e49d4d4c5136fb5c11d9d",
+      "sources": [
+        {
+          "name": "Migrated existing PayPal.list",
+          "source": "overrides/bank/PayPal.list",
+          "parsed": 5,
+          "added": 5,
+          "rules_sha256": "5036ebba9a2066b89a6d5ad76767bb81d41850fe4dddda2aefacd486640124ee"
+        },
+        {
+          "name": "blackmatrix7 PayPal (reviewed service domains)",
+          "source": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/PayPal/PayPal.list",
+          "parsed": 18,
+          "added": 14,
+          "rules_sha256": "2fde6016ed3bae4a53d42ec97e8fb8e6a206450ccf192d8d2749af7a62097bca",
+          "skipped": {
+            "DOMAIN-SUFFIX,account-paypal.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,account-paypal.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,account-paypal.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,accountpaypal.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,accountpaypal.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,accountpaypal.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,anfutong.cn": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,anfutong.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,anfutong.com.cn": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,beibao.cn": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,beibao.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,beibao.com.cn": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,bill-safe.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,billmelater.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,billmelater.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,billmelater.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,bml.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,braintreegateway.tv": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,braintreepayments.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,braintreepayments.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,braintreepayments.tv": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,briantreepayments.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,briantreepayments.tv": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,buyfast-paysmart.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,card.io": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,cash2.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,cashify.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,cashify.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,devtools-paypal.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,experiencebillmelater.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,filipino-music.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,fundpaypal.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,gmoney.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,i-o-u.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,krakenjs.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,loanbuilder.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,login-paypal.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,login-paypal.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,mywaytopay.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,mywaytopay.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,pa9pal.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paaypal.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paily.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paily.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paipal.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,pavpal.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paydiant.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paylike.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypa1.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypa1.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypaal.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-activate.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-activate.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-activate.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-apac.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-apps.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-biz.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-brandcentral.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-business.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-business.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-business.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-cardcash.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-cash.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-center.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-center.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-center.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-center.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-communication.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-communications.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-communications.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-community.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-comunidad.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-corp.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-database.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-database.us": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-donations.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-dynamic.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-engineering.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-europe.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-excelinvoicing.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-exchanges.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-forward.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-galactic.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-gift.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-gifts.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-gpplus.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-here.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-hrsystem.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-innovationlab.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-integration.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-japan.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-knowledge.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-labs.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-latam.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-learning.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-login.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-login.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-login.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-login.us": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-luxury.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-mainstreet.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-marketing.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-media.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-merchantloyalty.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-mobilemoney.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-network.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-notice.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-notify.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-online.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-online.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-online.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-optimizer.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-pages.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-photocard.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-plaza.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-portal.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-prepagata.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-prepagata.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-prepaid.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-profile.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-proserv.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-qrshopping.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-recargacelular.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-redeem.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-referral.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-retail.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-scoop.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-search.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-secure.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-secure.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-security.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-security.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-service.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-signin.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-signin.us": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-special.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-specialoffers.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-sptam.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-status.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-support.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-survey.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-survey.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-team.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal-viewpoints.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal.ca": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal.com.cn": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal.com.hk": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal.com.sg": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal.hk": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal.jp": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal.net.cn": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal.org.cn": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal.so": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypal.us": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalbeacon.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalbenefits.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalbrasil.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalcommunity.cn": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalcommunity.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalcommunity.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalhere.cn": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalhere.com.cn": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalhere.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalhere.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalhere.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalhere.tv": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypali.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalindia.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalinsuranceservices.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypall.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypallabs.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalme.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalnet.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalnet.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalnetwork.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalnetwork.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalnetwork.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalonline.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalonline.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalprepagata.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalprepagata.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalservice.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalshopping.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalshopping.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalsurvey.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypalx.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,paypaly.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,payppal.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,payypal.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,pdncommunity.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,pp-soc.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,ppaypal.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,pppds.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,pypl.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,pypl.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,pypl.tv": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,s-xoom.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,secure-paypal.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,securepaypal.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,simility.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,sslpaypal.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,swiftbank.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,swiftbank.us": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,swiftcapital.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,swiftfinancial.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,swiftfinancial.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,swiftfinancial.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,thepaypalshop.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,theshoppingexpresslane.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,venmo-touch.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,venmo.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,venmo.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,venmo.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,venmo.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,venmo.s3.amazonaws.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,webmoneyinfo.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,wiremoneytoirelandwithxoomeasierandcheaper.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,www-paypal.info": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,www-paypal.us": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,wwwxoom.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,xn--bnq297cix3a.cn": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,xoom-experience.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,xoom.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,xoom.io": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,xoom.net.cn": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,xoom.us": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,xoomcom.com": "domain outside reviewed source selection",
+            "DOMAIN-KEYWORD,paypal": "rule type outside source selection",
+            "USER-AGENT,PayPal*": "rule type outside source selection"
+          }
+        }
+      ]
+    },
+    "bank/OKX": {
+      "output": "rules/bank/OKX.list",
+      "rules": 16,
+      "sha256": "a9db1eb6962976618d09169646a26fe5b0ab93121545a79c803a8a82e027ed9a",
+      "sources": [
+        {
+          "name": "Migrated existing OKX.list",
+          "source": "overrides/bank/OKX.list",
+          "parsed": 16,
+          "added": 16,
+          "rules_sha256": "1678beb775c2b1c8834d890c9abb18e2159162ad0a723707f5f3ed78453f3e4b"
+        },
+        {
+          "name": "blackmatrix7 OKX",
+          "source": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/OKX/OKX.list",
+          "parsed": 3,
+          "added": 0,
+          "rules_sha256": "e0c0ba658a323f5386388041d4280f7ebc5698137495cc2e6d4e12ee2b9ee743"
+        }
+      ]
+    },
+    "bank/Bitget": {
+      "output": "rules/bank/Bitget.list",
+      "rules": 9,
+      "sha256": "e7c84e8eb6d800fc0d10bb25990fcc560ecd8649d78d98b6c258719e7600d3b7",
+      "sources": [
+        {
+          "name": "Migrated existing Bitget.list",
+          "source": "overrides/bank/Bitget.list",
+          "parsed": 4,
+          "added": 4,
+          "rules_sha256": "8f102f7949a6b57b35a01b829d6ca3f14f16c02a8484c62a7665b3e6568f3852"
+        },
+        {
+          "name": "LeiyuG Bitget (service-specific domains)",
+          "source": "https://raw.githubusercontent.com/LeiyuG/Surge/main/rules/Bitget.list",
+          "parsed": 7,
+          "added": 5,
+          "rules_sha256": "846d83eb1f21ff472f14dc39ca74c8f7c05a220fbcc1616309c7fdaa437b62e2",
+          "skipped": {
+            "DOMAIN-SUFFIX,abcdstable.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX,megacheck.vip": "domain outside reviewed source selection",
+            "DOMAIN-KEYWORD,bitget": "rule type outside source selection",
+            "DOMAIN-KEYWORD,bitgetapp": "rule type outside source selection"
+          }
+        }
+      ]
+    },
+    "bank/Bybit": {
+      "output": "rules/bank/Bybit.list",
+      "rules": 15,
+      "sha256": "5b8e92ffe5266e16853adb98d45ac277f2bc38eb379a7fdc6b1deb8ade6285fe",
+      "sources": [
+        {
+          "name": "Migrated existing Bybit.list",
+          "source": "overrides/bank/Bybit.list",
+          "parsed": 15,
+          "added": 15,
+          "rules_sha256": "eb6a9765d85e46fd7aad6ebf5e557dd1448edc5f75af5a215262520c25d0dbef"
+        }
+      ]
+    },
+    "bank/Bybit-EU": {
+      "output": "rules/bank/Bybit-EU.list",
+      "rules": 5,
+      "sha256": "89018872ee081223cb54d924d299de7ce746eb8a18aa6aa1888fff3ec753061d",
+      "sources": [
+        {
+          "name": "Migrated existing Bybit-EU.list",
+          "source": "overrides/bank/Bybit-EU.list",
+          "parsed": 5,
+          "added": 5,
+          "rules_sha256": "f3a8288a9a16c919d834ab3e37c9e6362f4f804f47379d25a580ff1c97811df0"
+        }
+      ]
+    },
+    "bank/Nexo": {
+      "output": "rules/bank/Nexo.list",
+      "rules": 4,
+      "sha256": "042065011c3eb1eb49b104637db4e306a07ddf0d6912a2b557d8dbb2ee7e8044",
+      "sources": [
+        {
+          "name": "Migrated existing Nexo.list",
+          "source": "overrides/bank/Nexo.list",
+          "parsed": 4,
+          "added": 4,
+          "rules_sha256": "22323196ba0690965c9d75cf1b164f2baed8431b33837d32419bfd0b8d07b019"
+        }
+      ]
+    },
+    "bank/RedotPay": {
+      "output": "rules/bank/RedotPay.list",
+      "rules": 3,
+      "sha256": "8bdb8063cd5c56b245a661c25eed2664223873651d6dca86a8359d038af63c6b",
+      "sources": [
+        {
+          "name": "Migrated existing RedotPay.list",
+          "source": "overrides/bank/RedotPay.list",
+          "parsed": 3,
+          "added": 3,
+          "rules_sha256": "1769645899f7c55361f993fda860c7ce1a44eef8fc00a3261c4de2ee3f8a2e7d"
+        }
+      ]
+    },
+    "bank/TevauPay": {
+      "output": "rules/bank/TevauPay.list",
+      "rules": 3,
+      "sha256": "4fd1cae5aa210ca6535e9c3d11698b83c46cd6596c556a77e093f8fa1cf4348a",
+      "sources": [
+        {
+          "name": "Migrated existing TevauPay.list",
+          "source": "overrides/bank/TevauPay.list",
+          "parsed": 3,
+          "added": 3,
+          "rules_sha256": "bf8fb03d0ab56dfa9992f34fe3172b6b19cdb1babb46f97c6ce2b0a69386bc67"
+        }
+      ]
+    },
+    "bank/dtcpay": {
+      "output": "rules/bank/dtcpay.list",
+      "rules": 1,
+      "sha256": "e0d2a687ab0cbd5fa76434abc01a1eb6cedc0755fd37774e42d92158ce698f02",
+      "sources": [
+        {
+          "name": "Migrated existing dtcpay.list",
+          "source": "overrides/bank/dtcpay.list",
+          "parsed": 1,
+          "added": 1,
+          "rules_sha256": "c0332b4df6c55a9055d7fbfa5a41c8da3420c394cfdfd0f77a027e7c02d0ec10"
+        }
+      ]
+    },
+    "bank/LemFi": {
+      "output": "rules/bank/LemFi.list",
+      "rules": 4,
+      "sha256": "69c34c8703519c20b021e269db8bda3072407f9445bb6e4b1189c2faad0084dc",
+      "sources": [
+        {
+          "name": "Migrated existing LemFi.list",
+          "source": "overrides/bank/LemFi.list",
+          "parsed": 4,
+          "added": 4,
+          "rules_sha256": "dd74447eb509345058ae583c2fd3877d30d73a919a9b0b91e1d48a81bec79405"
+        }
+      ]
+    },
+    "bank/Trading212": {
+      "output": "rules/bank/Trading212.list",
+      "rules": 3,
+      "sha256": "fc26d9f1f2d91c96403b3906e3bb0ec9419d539f7fea93f096858a3ff147927e",
+      "sources": [
+        {
+          "name": "Migrated existing Trading212.list",
+          "source": "overrides/bank/Trading212.list",
+          "parsed": 3,
+          "added": 3,
+          "rules_sha256": "5b8bbf00d2ff2c850a97c9ef13d59f7ef4cd6d2fa8110897d22711f6eec88189"
+        }
+      ]
+    },
+    "bank/Maya": {
+      "output": "rules/bank/Maya.list",
+      "rules": 4,
+      "sha256": "a84a017548f415ac69afcc708553b5fa51bab44a9124b187a4d9e8a7603b26a6",
+      "sources": [
+        {
+          "name": "Migrated existing Maya.list",
+          "source": "overrides/bank/Maya.list",
+          "parsed": 4,
+          "added": 4,
+          "rules_sha256": "f8dfae73c579c286ca1de3d4a986b5f529de51834061e3c87ad10f648e041de6"
+        }
+      ]
+    },
+    "bank/Solflare": {
+      "output": "rules/bank/Solflare.list",
+      "rules": 2,
+      "sha256": "34335815f99f16eaa1c72612c18a60439aebcb7bf20e2ad2d59bb8cbbcd28a6a",
+      "sources": [
+        {
+          "name": "Migrated existing Solflare.list",
+          "source": "overrides/bank/Solflare.list",
+          "parsed": 2,
+          "added": 2,
+          "rules_sha256": "1bbd6f115b06f507bb76413c7a15243c2e3eb01417b39426cd9558107bca3079"
+        }
+      ]
+    },
+    "bank/EtherFi": {
+      "output": "rules/bank/EtherFi.list",
+      "rules": 3,
+      "sha256": "30dd004305cc5429ba838d8c5a3cb8b5a7ff882cfd0a2d891582a88f64290b85",
+      "sources": [
+        {
+          "name": "Migrated existing EtherFi.list",
+          "source": "overrides/bank/EtherFi.list",
+          "parsed": 3,
+          "added": 3,
+          "rules_sha256": "40d1048ab93c35e192022d99177e4824ba343741c580dea07242b6e081ca9ba6"
+        }
+      ]
+    },
+    "bank/Plasma": {
+      "output": "rules/bank/Plasma.list",
+      "rules": 4,
+      "sha256": "5eeaed0bc35c1d5f3487ded3d50c40089c3cf7fa280a76a7b5e897337cbf9363",
+      "sources": [
+        {
+          "name": "Migrated existing Plasma.list",
+          "source": "overrides/bank/Plasma.list",
+          "parsed": 4,
+          "added": 4,
+          "rules_sha256": "5f21d84147319e78f6576bb9c0f16427e99a8241226801413f3fc18306d10a43"
+        }
+      ]
+    },
+    "bank/UR": {
+      "output": "rules/bank/UR.list",
+      "rules": 1,
+      "sha256": "f6049028f363a32adfeea7462b3992c834e0c250ab6c6b75602ce2a599a6f8d0",
+      "sources": [
+        {
+          "name": "Migrated existing UR.list",
+          "source": "overrides/bank/UR.list",
+          "parsed": 1,
+          "added": 1,
+          "rules_sha256": "21178765ed9a80c39c28a2a460cf6d121757e858af5c6e9d7cbb3f9d5603b10b"
+        }
+      ]
+    },
+    "bank/YPT": {
+      "output": "rules/bank/YPT.list",
+      "rules": 3,
+      "sha256": "f054d2c3cae5c346810c46fdfd6f0d70ff9defd8af8c6da254bb94c0e76f0d6c",
+      "sources": [
+        {
+          "name": "Migrated existing YPT.list",
+          "source": "overrides/bank/YPT.list",
+          "parsed": 3,
+          "added": 3,
+          "rules_sha256": "08b5e99eab8e58638de16c2ca62feea7899bbdea198c7062cd7df35c5ef3a630"
+        }
+      ]
+    },
+    "bank/Sumsub": {
+      "output": "rules/bank/Sumsub.list",
+      "rules": 5,
+      "sha256": "47858c26f4051310ee5cdbdaef9338c382155b16279c2dd7d7d2d18197d58cf9",
+      "sources": [
+        {
+          "name": "Migrated existing Sumsub.list",
+          "source": "overrides/bank/Sumsub.list",
+          "parsed": 5,
+          "added": 5,
+          "rules_sha256": "6bf8bc778c27346ac3ea3674f2e71090a80065298f6cca3643ad365bc5414f34"
+        }
+      ]
     }
   }
 }

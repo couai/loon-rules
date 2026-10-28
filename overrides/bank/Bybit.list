@@ -1,0 +1,37 @@
+# Imported 2026-10-28 from https://image-1251506627.cos.ap-shanghai.myqcloud.com/loon-rules/bank/Bybit.list
+# NAME: Bybit
+# DESC: Bybit exchange and auth helper services, narrowed v2
+# FORMAT: Loon rule list
+# GENERATED: 2026-06-27 v2.1
+# TOTAL: 15
+
+DOMAIN-SUFFIX,bybit.com
+DOMAIN-SUFFIX,www.bybit.com
+DOMAIN-SUFFIX,sg.bybit.com
+DOMAIN-SUFFIX,bybit.biz
+DOMAIN-SUFFIX,bybit.cloud
+DOMAIN-SUFFIX,bybitglobal.com
+DOMAIN-SUFFIX,bybit-global.com
+DOMAIN-SUFFIX,bytick.com
+DOMAIN,bybit.ada.support
+DOMAIN,bybit-exchange.github.io
+DOMAIN-SUFFIX,api.bitverse.zone
+DOMAIN-SUFFIX,inapps.appsflyer.com
+DOMAIN-SUFFIX,arkoselabs.com
+DOMAIN-KEYWORD,bybit
+DOMAIN-KEYWORD,bitverse
+# LOW-CONFIDENCE/DNS-FAILED OR TOO BROAD:
+# DOMAIN-SUFFIX,bybit.global
+# DOMAIN-SUFFIX,bycsi.com
+# DOMAIN-SUFFIX,byapis.com
+# DOMAIN-SUFFIX,bycbe.com
+# DOMAIN-SUFFIX,bymj.io
+# DOMAIN-SUFFIX,bitverse.zone
+# DOMAIN-SUFFIX,byapps.net
+# DOMAIN-SUFFIX,bybdc6.com
+# DOMAIN-SUFFIX,byabcde.com
+# DOMAIN-SUFFIX,byd3c3.com
+# DOMAIN-SUFFIX,ffbbbdc6d3c353211fe2ba39c9f744cd.com
+# DOMAIN-KEYWORD,byapps
+# DOMAIN-KEYWORD,bybdc
+# DOMAIN-KEYWORD,byb

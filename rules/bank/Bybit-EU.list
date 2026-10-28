@@ -1,0 +1,8 @@
+# bank/Bybit-EU — generated; edit sources.json or overrides instead.
+# Sources and attribution: https://github.com/couai/loon-rules/blob/main/NOTICE.md
+# Rules: 5
+DOMAIN-SUFFIX,bybit.eu
+DOMAIN-SUFFIX,www.bybit.eu
+DOMAIN-SUFFIX,api.bybit.eu
+DOMAIN-SUFFIX,static.bybit.eu
+DOMAIN-SUFFIX,testnet.bybit.eu

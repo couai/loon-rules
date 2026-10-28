@@ -1,0 +1,14 @@
+# bank/Coinbase — generated; edit sources.json or overrides instead.
+# Sources and attribution: https://github.com/couai/loon-rules/blob/main/NOTICE.md
+# Rules: 11
+DOMAIN-SUFFIX,coinbase.com
+DOMAIN-SUFFIX,coinbase.net
+DOMAIN-SUFFIX,cb.id
+DOMAIN-SUFFIX,status.coinbase.com
+DOMAIN-SUFFIX,help.coinbase.com
+DOMAIN-SUFFIX,arkoselabs.com
+DOMAIN-SUFFIX,withpersona.com
+DOMAIN,asset-metadata-service-production.s3.amazonaws.com
+DOMAIN-SUFFIX,coinbasecdn.net
+DOMAIN-SUFFIX,cb-device-intelligence.com
+DOMAIN-SUFFIX,walletlink.org

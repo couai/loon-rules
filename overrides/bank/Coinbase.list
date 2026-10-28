@@ -1,0 +1,20 @@
+# Imported 2026-10-28 from https://image-1251506627.cos.ap-shanghai.myqcloud.com/loon-rules/bank/Coinbase.list
+# NAME: Coinbase
+# DESC: Coinbase exchange, wallet and auth helper services
+# FORMAT: Loon rule list
+# GENERATED: 2026-06-27 v2
+# TOTAL: 7
+
+DOMAIN-SUFFIX,coinbase.com
+DOMAIN-SUFFIX,coinbase.net
+DOMAIN-SUFFIX,cb.id
+DOMAIN-SUFFIX,status.coinbase.com
+DOMAIN-SUFFIX,help.coinbase.com
+DOMAIN-SUFFIX,arkoselabs.com
+DOMAIN-SUFFIX,withpersona.com
+# LOW-CONFIDENCE/DNS-FAILED:
+# DOMAIN-SUFFIX,coinbase.pro
+# DOMAIN-SUFFIX,coinbase.io
+# DOMAIN-SUFFIX,coinbasecdn.net
+# DOMAIN-SUFFIX,coinbasestatic.com
+# DOMAIN-SUFFIX,coinbase-corp.com

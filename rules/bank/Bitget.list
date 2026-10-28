@@ -1,0 +1,12 @@
+# bank/Bitget — generated; edit sources.json or overrides instead.
+# Sources and attribution: https://github.com/couai/loon-rules/blob/main/NOTICE.md
+# Rules: 9
+DOMAIN-SUFFIX,bitget.com
+DOMAIN-SUFFIX,web3.bitget.com
+DOMAIN-SUFFIX,bitgetapp.com
+DOMAIN-KEYWORD,bitget
+DOMAIN,h1dz7f.cdn-settings.appsflyersdk.com
+DOMAIN-SUFFIX,bgstatic.com
+DOMAIN-SUFFIX,bitgetapps.com
+DOMAIN-SUFFIX,bitgetimg.com
+DOMAIN-SUFFIX,krbitget.com

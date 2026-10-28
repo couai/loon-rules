@@ -1,0 +1,14 @@
+# Imported 2026-10-28 from https://image-1251506627.cos.ap-shanghai.myqcloud.com/loon-rules/bank/Bitget.list
+# NAME: Bitget
+# DESC: Bitget exchange and wallet service
+# FORMAT: Loon rule list
+# GENERATED: 2026-06-27 v2
+# TOTAL: 4
+
+DOMAIN-SUFFIX,bitget.com
+DOMAIN-SUFFIX,web3.bitget.com
+DOMAIN-SUFFIX,bitgetapp.com
+DOMAIN-KEYWORD,bitget
+# LOW-CONFIDENCE/DNS-FAILED:
+# DOMAIN-SUFFIX,bitgetimg.com
+# DOMAIN-SUFFIX,bitgetstatic.com

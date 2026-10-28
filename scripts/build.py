@@ -63,6 +63,20 @@ def loon_rule(line):
         return kind + ',' + domain(parts[1])
     if kind == 'DOMAIN-KEYWORD' and len(parts) == 2 and re.fullmatch(r'[a-zA-Z0-9._-]+', parts[1]):
         return kind + ',' + parts[1].lower()
+    if kind == 'GEOIP' and len(parts) in {2, 3} and re.fullmatch(r'[A-Za-z]{2}', parts[1]):
+        if len(parts) == 3 and parts[2] != 'no-resolve':
+            raise ValueError(f'Unexpected GEOIP option: {line}')
+        return ','.join([kind, parts[1].upper()] + parts[2:])
+    if kind == 'PROTOCOL' and len(parts) == 2 and parts[1].upper() in {'HTTP', 'HTTPS', 'TCP', 'QUIC', 'STUN', 'UDP'}:
+        return kind + ',' + parts[1].upper()
+    if kind in {'DEST-PORT', 'SRC-PORT'} and len(parts) == 2:
+        value = parts[1]
+        if not re.fullmatch(r'(?:[<>]=?)?\d+|\d+-\d+', value):
+            raise ValueError(f'Invalid port expression: {line}')
+        numbers = [int(n) for n in re.findall(r'\d+', value)]
+        if any(n < 1 or n > 65535 for n in numbers) or (len(numbers) == 2 and numbers[0] > numbers[1]):
+            raise ValueError(f'Invalid port range: {line}')
+        return kind + ',' + value
     if kind in {'IP-CIDR', 'IP-CIDR6'} and len(parts) in {2, 3}:
         network = ipaddress.ip_network(parts[1], strict=True)
         if network.version != (6 if kind == 'IP-CIDR6' else 4):
@@ -144,6 +158,35 @@ def digest(raw):
     return hashlib.sha256(raw).hexdigest()
 
 
+def selected_text_rules(text, source):
+    """Apply explicitly configured source filters before parsing unsupported lines."""
+    keep, skipped = [], {}
+    exclusions = {re.sub(r'\s+', '', x) for x in source.get('exclude_lines', [])}
+    for line in text.splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.startswith(('#', '//', ';')):
+            continue
+        if re.sub(r'\s+', '', stripped) in exclusions:
+            skipped[stripped] = 'explicit source exclusion'
+            continue
+        types = source.get('include_rule_types')
+        if types and stripped.split(',', 1)[0].strip().upper() not in types:
+            skipped[stripped] = 'rule type outside source selection'
+            continue
+        parsed = text_rules(stripped, source['format'])
+        for rule in parsed:
+            domains = source.get('include_domains')
+            if domains:
+                parts = rule.split(',')
+                if parts[0] not in {'DOMAIN', 'DOMAIN-SUFFIX'} or not any(
+                    parts[1] == d or parts[1].endswith('.' + d) for d in domains
+                ):
+                    skipped[stripped] = 'domain outside reviewed source selection'
+                    continue
+            keep.append(rule)
+    return keep, skipped
+
+
 def build(root=ROOT, loader=fetch):
     config = json.loads((root / 'sources.json').read_text())
     outputs, report = {}, {'collections': {}}
@@ -155,7 +198,7 @@ def build(root=ROOT, loader=fetch):
             if source['format'] == 'models-tar':
                 parsed, skipped = model_rules(raw, source)
             else:
-                parsed, skipped = text_rules(raw.decode('utf-8'), source['format']), {}
+                parsed, skipped = selected_text_rules(raw.decode('utf-8-sig'), source)
             if len(parsed) < source.get('min_rules', 1):
                 raise ValueError(f"{source['name']}: only {len(parsed)} rules; refusing partial publication")
             added = 0

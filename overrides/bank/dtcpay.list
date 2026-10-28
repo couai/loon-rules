@@ -1,0 +1,8 @@
+# Imported 2026-10-28 from https://image-1251506627.cos.ap-shanghai.myqcloud.com/loon-rules/bank/dtcpay.list
+# NAME: dtcpay
+# DESC: dtcpay payment service
+# FORMAT: Loon rule list
+# GENERATED: 2026-06-27
+# TOTAL: 1
+
+DOMAIN-SUFFIX,dtcpay.com

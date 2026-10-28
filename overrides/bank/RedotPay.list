@@ -1,0 +1,12 @@
+# Imported 2026-10-28 from https://image-1251506627.cos.ap-shanghai.myqcloud.com/loon-rules/bank/RedotPay.list
+# NAME: RedotPay
+# DESC: RedotPay service
+# FORMAT: Loon rule list
+# GENERATED: 2026-06-27 v2
+# TOTAL: 3
+
+DOMAIN-SUFFIX,redotpay.com
+DOMAIN-KEYWORD,redotpay
+DOMAIN-SUFFIX,appsflyer.com
+# LOW-CONFIDENCE/DNS-FAILED:
+# DOMAIN-SUFFIX,redotpay.net

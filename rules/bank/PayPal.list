@@ -1,0 +1,22 @@
+# bank/PayPal — generated; edit sources.json or overrides instead.
+# Sources and attribution: https://github.com/couai/loon-rules/blob/main/NOTICE.md
+# Rules: 19
+DOMAIN-SUFFIX,paypal.com
+DOMAIN-SUFFIX,paypal.me
+DOMAIN-SUFFIX,paypalobjects.com
+DOMAIN-SUFFIX,paypal-mktg.com
+DOMAIN-KEYWORD,paypal
+DOMAIN-SUFFIX,braintreegateway.com
+DOMAIN-SUFFIX,braintreepayments.com
+DOMAIN-SUFFIX,braintreepaymentsolutions.com
+DOMAIN-SUFFIX,braintreeps.com
+DOMAIN-SUFFIX,getbraintree.com
+DOMAIN-SUFFIX,paypal-community.com
+DOMAIN-SUFFIX,paypalcommunity.com
+DOMAIN-SUFFIX,paypalcorp.com
+DOMAIN-SUFFIX,paypalcredit.com
+DOMAIN-SUFFIX,paypalcreditcard.com
+DOMAIN-SUFFIX,paypalgivingfund.org
+DOMAIN-SUFFIX,paypalhere.com
+DOMAIN-SUFFIX,paypalinc.com
+DOMAIN-SUFFIX,pypl.com

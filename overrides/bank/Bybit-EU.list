@@ -1,0 +1,15 @@
+# Imported 2026-10-28 from https://image-1251506627.cos.ap-shanghai.myqcloud.com/loon-rules/bank/Bybit-EU.list
+# NAME: Bybit-EU
+# DESC: Bybit EU exchange service
+# FORMAT: Loon rule list
+# GENERATED: 2026-06-27
+# TOTAL: 5
+
+DOMAIN-SUFFIX,bybit.eu
+DOMAIN-SUFFIX,www.bybit.eu
+DOMAIN-SUFFIX,api.bybit.eu
+DOMAIN-SUFFIX,static.bybit.eu
+DOMAIN-SUFFIX,testnet.bybit.eu
+
+# LOW-CONFIDENCE/DNS-FAILED:
+# DOMAIN-SUFFIX,app.bybit.eu

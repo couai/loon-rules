@@ -1,0 +1,7 @@
+# bank/Plasma — generated; edit sources.json or overrides instead.
+# Sources and attribution: https://github.com/couai/loon-rules/blob/main/NOTICE.md
+# Rules: 4
+DOMAIN-SUFFIX,plasma.org
+DOMAIN-SUFFIX,plasma.to
+DOMAIN-SUFFIX,app.plasma.to
+DOMAIN-SUFFIX,one.plasma.to

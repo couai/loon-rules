@@ -1,0 +1,12 @@
+# bank/Kraken — generated; edit sources.json or overrides instead.
+# Sources and attribution: https://github.com/couai/loon-rules/blob/main/NOTICE.md
+# Rules: 9
+DOMAIN-SUFFIX,kraken.com
+DOMAIN-SUFFIX,krakenfutures.com
+DOMAIN-SUFFIX,status.kraken.com
+DOMAIN-SUFFIX,kraken.zendesk.com
+DOMAIN-KEYWORD,kraken
+DOMAIN-SUFFIX,cryptowat.ch
+DOMAIN-SUFFIX,arkoselabs.com
+DOMAIN-SUFFIX,hcaptcha.com
+DOMAIN-SUFFIX,kraken.onl

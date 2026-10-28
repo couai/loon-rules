@@ -1,0 +1,25 @@
+# Imported 2026-10-28 from https://image-1251506627.cos.ap-shanghai.myqcloud.com/loon-rules/bank/OKX.list
+# NAME: OKX
+# DESC: OKX exchange and OKLink services
+# FORMAT: Loon rule list
+# GENERATED: 2026-06-27 v2.1
+# TOTAL: 16
+
+DOMAIN-SUFFIX,okx.com
+DOMAIN-SUFFIX,okex.com
+DOMAIN-SUFFIX,okx-dns.com
+DOMAIN-KEYWORD,okx
+DOMAIN-SUFFIX,okcdn.com
+DOMAIN-SUFFIX,okimgs.com
+DOMAIN-SUFFIX,oklink.com
+DOMAIN-SUFFIX,okg.com
+DOMAIN-SUFFIX,geetest.com
+DOMAIN,api.amplitudeexperiment.com
+DOMAIN,api.onesignal.com
+DOMAIN,www.okx.com.cdn.cloudflare.net
+DOMAIN-KEYWORD,d1nil3qbkxfj92
+DOMAIN-KEYWORD,d1w1p0smpsoh5j
+DOMAIN-KEYWORD,d2p7qknqur0nu9
+DOMAIN-KEYWORD,ipyp0a
+# LOW-CONFIDENCE/APEX DNS-FAILED; keep if packet capture confirms:
+# DOMAIN-SUFFIX,online-metrix.net

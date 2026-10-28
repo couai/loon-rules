@@ -1,0 +1,12 @@
+# Imported 2026-10-28 from https://image-1251506627.cos.ap-shanghai.myqcloud.com/loon-rules/bank/Sumsub.list
+# NAME: Sumsub
+# DESC: Sumsub KYC verification helper service
+# FORMAT: Loon rule list
+# GENERATED: 2026-06-27 v2
+# TOTAL: 5
+
+DOMAIN-SUFFIX,sumsub.com
+DOMAIN-SUFFIX,sumsub.io
+DOMAIN-SUFFIX,api.sumsub.com
+DOMAIN-SUFFIX,static.sumsub.com
+DOMAIN-SUFFIX,id.sumsub.com

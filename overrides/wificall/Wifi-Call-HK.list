@@ -1,0 +1,18 @@
+# Imported 2026-10-28 from https://image-1251506627.cos.ap-shanghai.myqcloud.com/loon-rules/wificall/Wifi-Call-HK.list
+#!name=Wifi-Call-HK
+#!desc=Hong Kong SIM Wi-Fi Calling / VoWiFi rules for Loon
+# NAME: Wifi-Call-HK
+# DESC: Hong Kong SIM Wi-Fi Calling / VoWiFi
+# FORMAT: Loon rule list
+# GENERATED: 2026-06-27
+# TOTAL: 9
+
+DOMAIN-SUFFIX,wlan.three.com.hk
+DOMAIN-SUFFIX,epdg.epc.mnc000.mcc454.pub.3gppnetwork.org
+DOMAIN-SUFFIX,ss.epdg.epc.mnc000.mcc454.pub.3gppnetwork.org
+DOMAIN-SUFFIX,ss.epdg.epc.geo.mnc000.mcc454.pub.3gppnetwork.org
+IP-CIDR,203.145.92.0/24,no-resolve
+IP-CIDR,203.145.88.0/21,no-resolve
+IP-CIDR,203.145.80.0/20,no-resolve
+IP-CIDR,124.217.186.0/24,no-resolve
+IP-CIDR,124.217.128.0/18,no-resolve

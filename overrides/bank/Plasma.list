@@ -1,0 +1,11 @@
+# Imported 2026-10-28 from https://image-1251506627.cos.ap-shanghai.myqcloud.com/loon-rules/bank/Plasma.list
+# NAME: Plasma
+# DESC: Plasma stablecoin account and network service
+# FORMAT: Loon rule list
+# GENERATED: 2026-06-27 v2
+# TOTAL: 4
+
+DOMAIN-SUFFIX,plasma.org
+DOMAIN-SUFFIX,plasma.to
+DOMAIN-SUFFIX,app.plasma.to
+DOMAIN-SUFFIX,one.plasma.to
