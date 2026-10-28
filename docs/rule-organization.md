@@ -31,6 +31,7 @@
 以下重叠需要区分处理：
 
 - 旧 `UK.list` 的 90 条精简为 `UK-Banks.list` 的 60 条：删除 `co.uk`、Stripe、LemFi、Trading212、共享统计/验证服务等 30 条，保留银行域名、品牌关键词与原 IP 规则。Stripe 使用现有独立订阅并放在 OpenAI 前；LemFi、Trading212 使用各自独立订阅。不要同时启用新旧 UK 列表。
+- 客户端银行规则先放各服务的独立订阅，最后放 `UK-Banks.list` 作为英国银行补充（当前位于 Sumsub 后、GitHub 前），保留英国手动选择策略。当前合集与独立银行列表没有发现域名或完整规则重叠；该顺序也便于以后增加专用规则。
 ## 运营商范围与优先级
 
 四份 WiFi Calling 按 UK、HK、DE、US 的原顺序放在 HK-Carrier-App 前，各自保留原地区策略。这样 `wlan.three.com.hk` 先命中香港 WiFi Calling，随后 `three.com.hk` 才覆盖运营商 App。域名规则仍遵循 Loon 的类型和来源优先级，提前订阅不会使 IP 规则越过域名规则。
