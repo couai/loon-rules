@@ -20,9 +20,9 @@ https://raw.githubusercontent.com/couai/loon-rules/main/rules/AI-Combined.list, 
 
 ### WiFi Calling、运营商与银行规则
 
-另外提供 27 份分类订阅：[WiFi Calling](rules/wificall/)（UK/HK/DE/US）、[香港运营商 App](rules/carrier/)、[银行与支付](rules/bank/)（22 份）。每份保持独立，方便继续绑定原来的地区策略。目录、公开上游筛选、重叠项与本地规则归档建议见 [规则整理说明](docs/rule-organization.md)。
+已迁入的 WiFi Calling、运营商和银行规则：[WiFi Calling](rules/wificall/)（UK/HK/DE/US）、[香港运营商 App](rules/carrier/)、[银行与支付](rules/bank/)。每份保持独立，方便继续绑定原来的地区策略。另外提供 [Claude 专项](rules/ai/)、[Oracle 等服务](rules/services/)、[社区网站](rules/community/) 和独立银行/钱包补充。英国银行推荐使用精简的 [UK-Banks.list](rules/bank/UK-Banks.list)，旧 UK.list 仅保留兼容。目录、公开上游筛选、重叠项与本地规则归档结果见 [规则整理说明](docs/rule-organization.md)。
 
-维护已迁移的规则请编辑 `overrides/wificall/`、`overrides/carrier/`、`overrides/bank/`；公开来源由 `sources.json` 管理，使用现有的六小时更新任务。不要直接编辑 `rules/` 下的生成文件。
+维护已迁移的规则请编辑 `overrides/` 对应分类；公开来源由 `sources.json` 管理，使用现有的六小时更新任务。不要直接编辑 `rules/` 下的生成文件。
 
 ### AI
 
@@ -71,7 +71,7 @@ python3 scripts/build.py
 
 把 `Example` 对象放进现有 `collections`，并创建对应的本地规则文件即可。远程来源把 `path` 换成 `url`。
 
-支持 `loon`、`domain-list` 和 `models-tar`。`loon` 支持 DOMAIN、DOMAIN-SUFFIX、DOMAIN-KEYWORD、IP-CIDR、IP-CIDR6、GEOIP、PROTOCOL、SRC-PORT、DEST-PORT 和 AND/OR 组合；规则不含策略。`domain-list` 将 `+.example.com` 转为后缀规则，裸域名转为精确匹配。其他格式或规则类型需要先扩展解析器与测试。
+支持 `loon`、`domain-list` 和 `models-tar`。`loon` 支持 DOMAIN、DOMAIN-SUFFIX、DOMAIN-KEYWORD、IP-CIDR、IP-CIDR6、IP-ASN、GEOIP、PROTOCOL、SRC-PORT、DEST-PORT 和 AND/OR 组合；规则不含策略。`domain-list` 将 `+.example.com` 转为后缀规则，裸域名转为精确匹配。其他格式或规则类型需要先扩展解析器与测试。
 
 `exclude_rules` 按规范化后的完整规则精确排除；`required_rules` 可指定必须存在的规则。自定义补充放在 `overrides/`，不要直接编辑生成文件。
 

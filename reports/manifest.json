@@ -2,8 +2,8 @@
   "collections": {
     "AI-Combined": {
       "output": "rules/AI-Combined.list",
-      "rules": 439,
-      "sha256": "db725b56e83e7fec9ea5ef2bb70846dda7f16f3a018cc8dd97c00f68431c4551",
+      "rules": 440,
+      "sha256": "1db02d12691e90818c7eae34ce7ceb0fe1f80235f24a50232ca54e680112d2dd",
       "sources": [
         {
           "name": "MetaCubeX overseas AI",
@@ -15,9 +15,9 @@
         {
           "name": "models.dev explicit API hosts",
           "source": "https://codeload.github.com/anomalyco/models.dev/tar.gz/refs/heads/dev",
-          "parsed": 167,
-          "added": 161,
-          "rules_sha256": "642aa3307eaedbe5f6322e3a5693e5db7c9e7eede29b278bd37ef94b02b0f72d",
+          "parsed": 168,
+          "added": 162,
+          "rules_sha256": "04e8736daad07cf8a76bde60a973d7eef08862268cfb105b68b2e22831282c5e",
           "skipped": {
             "aihubmix": "SDK default; no explicit API URL",
             "alibaba-cn": "excluded provider",
@@ -809,6 +809,370 @@
           "parsed": 5,
           "added": 5,
           "rules_sha256": "6bf8bc778c27346ac3ea3674f2e71090a80065298f6cca3643ad365bc5414f34"
+        }
+      ]
+    },
+    "ai/Claude-NTP": {
+      "output": "rules/ai/Claude-NTP.list",
+      "rules": 116,
+      "sha256": "17cd222ec18dc5a8a73cdbcdd3930a9239384ed6f61818108d7178470d4d2b64",
+      "sources": [
+        {
+          "name": "Migrated existing ai/Claude-NTP",
+          "source": "overrides/ai/Claude-NTP.list",
+          "parsed": 116,
+          "added": 116,
+          "rules_sha256": "745949a8a91eeb699565cdce8db3a4422d9e5619af0f936706c0ce3b305c44f8"
+        }
+      ]
+    },
+    "ai/Claude-NetCoffee": {
+      "output": "rules/ai/Claude-NetCoffee.list",
+      "rules": 34,
+      "sha256": "141eea31fe36bbf70cb1867264d6c60b560987ea015872f76281fd6c7dba3c92",
+      "sources": [
+        {
+          "name": "Migrated existing ai/Claude-NetCoffee",
+          "source": "overrides/ai/Claude-NetCoffee.list",
+          "parsed": 34,
+          "added": 34,
+          "rules_sha256": "f52902bc432bf74e35024f89271828d0bad8702049700a58176df679e4544abe"
+        }
+      ]
+    },
+    "services/Oracle-Loon": {
+      "output": "rules/services/Oracle-Loon.list",
+      "rules": 25,
+      "sha256": "827ab2bc67083f415a770c2df69c5b4a84875d091d8b85350e684c558b6bef69",
+      "sources": [
+        {
+          "name": "Migrated existing services/Oracle-Loon",
+          "source": "overrides/services/Oracle-Loon.list",
+          "parsed": 25,
+          "added": 25,
+          "rules_sha256": "0c0fe3297f53f1bc25ac0b12dcbd8dce1b7c9bf4f04ebf1e81100f1521837808"
+        }
+      ]
+    },
+    "ai/AnyRouter": {
+      "output": "rules/ai/AnyRouter.list",
+      "rules": 1,
+      "sha256": "bb1f80d33dbf89c55487c33b1da56c70cedb51bb964a084360806c5fba310bdf",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "source": "overrides/ai/AnyRouter.list",
+          "parsed": 1,
+          "added": 1,
+          "rules_sha256": "71f3bd44b1179e202979a4ba7106df5aa85c700a2e02aa3e9a1a185a0257daa8"
+        }
+      ]
+    },
+    "community/LinuxDo": {
+      "output": "rules/community/LinuxDo.list",
+      "rules": 1,
+      "sha256": "eed44cbf786104c002e4ada10b434cc7694fdb400f80f4677d28dd6260bafbd0",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "source": "overrides/community/LinuxDo.list",
+          "parsed": 1,
+          "added": 1,
+          "rules_sha256": "d3ccf9028d181e065f254483b2ac37cb2ea315604532d9ee9cc6de29efefcac2"
+        }
+      ]
+    },
+    "services/Railway": {
+      "output": "rules/services/Railway.list",
+      "rules": 1,
+      "sha256": "f3a37261421c66dcb953f1aa879066800e758cf3019e1ff384cc43eb3be6deb7",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "source": "overrides/services/Railway.list",
+          "parsed": 1,
+          "added": 1,
+          "rules_sha256": "93b3418867ffa82cbb106b33de2c063c42511e97a6332641ad457409f2a885e3"
+        }
+      ]
+    },
+    "services/PingMe": {
+      "output": "rules/services/PingMe.list",
+      "rules": 1,
+      "sha256": "24df80de94fb35524c34c2718b3eaa040bebba4b85ce8989a4893f60db968a5b",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "source": "overrides/services/PingMe.list",
+          "parsed": 1,
+          "added": 1,
+          "rules_sha256": "890079567c82ceab06a624af17ca9ff6a69967b37481dbe3ef5041002d443164"
+        }
+      ]
+    },
+    "bank/Bycsi": {
+      "output": "rules/bank/Bycsi.list",
+      "rules": 1,
+      "sha256": "5382ef46d51f463b8bf5980cd3ab493e1cd7c83c78cf31b69e5bc0d2572eba74",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "source": "overrides/bank/Bycsi.list",
+          "parsed": 1,
+          "added": 1,
+          "rules_sha256": "22be5998e2d845ef4e3f6fc98c83bd1d342ac57a93fbfdc79b8ae798ae329603"
+        }
+      ]
+    },
+    "community/V2EX": {
+      "output": "rules/community/V2EX.list",
+      "rules": 1,
+      "sha256": "56b0c2a8bc7f28dc195db19f40ee9e2bd52df13d0095a161add9c2ea23d3c86c",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "source": "overrides/community/V2EX.list",
+          "parsed": 1,
+          "added": 1,
+          "rules_sha256": "277fd5415ba94e3c1a9c5d02504ce8a70dae208dd54701ed6340a59615248ad4"
+        }
+      ]
+    },
+    "ai/Dzmm": {
+      "output": "rules/ai/Dzmm.list",
+      "rules": 1,
+      "sha256": "8bf9ca2379e6723c578fe05a86dcf68fdaeda92f7b70a85be468d464748bebee",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "source": "overrides/ai/Dzmm.list",
+          "parsed": 1,
+          "added": 1,
+          "rules_sha256": "abb7eeac99cf77ce49b6ed1a571a0547dd068f3a956acf631f0280015091cfc1"
+        }
+      ]
+    },
+    "services/AppleSafeBrowsing": {
+      "output": "rules/services/AppleSafeBrowsing.list",
+      "rules": 1,
+      "sha256": "3a8f3d0015c77514e3827a953133006256d6b2894e444f94e738c5e738a11f2d",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "source": "overrides/services/AppleSafeBrowsing.list",
+          "parsed": 1,
+          "added": 1,
+          "rules_sha256": "340b143ea47e1419aa9a2c2ea9357cc5501e1ebb55894f1a79d371d9e315cfeb"
+        }
+      ]
+    },
+    "carrier/O2-DE": {
+      "output": "rules/carrier/O2-DE.list",
+      "rules": 1,
+      "sha256": "369213998ca863261f2e62cb9c7b875d7963c9d523b07c9c6b6f47ab013cf5ab",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "source": "overrides/carrier/O2-DE.list",
+          "parsed": 1,
+          "added": 1,
+          "rules_sha256": "7c218de62609961b98f023a74099d224c2f29fefe98299718dfbf448b5021509"
+        }
+      ]
+    },
+    "bank/Zopa": {
+      "output": "rules/bank/Zopa.list",
+      "rules": 1,
+      "sha256": "857268a9fd1821bde230f6770b51359025464c785a33b1ac2ea807c2a8b03114",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "source": "overrides/bank/Zopa.list",
+          "parsed": 1,
+          "added": 1,
+          "rules_sha256": "17c63a69a4294942b067001e006c21b11436e3b400eed1b0593ad1eed9030bba"
+        }
+      ]
+    },
+    "bank/PetaFuel": {
+      "output": "rules/bank/PetaFuel.list",
+      "rules": 1,
+      "sha256": "965082e6540228a79e7b7c48809943cd13197e2b6702effd1fee1f8b93afbeb5",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "source": "overrides/bank/PetaFuel.list",
+          "parsed": 1,
+          "added": 1,
+          "rules_sha256": "1660edd52c073dfcd46683c0be0023d1c3ac1f31fb33daff5b1efb1cf03d31a8"
+        }
+      ]
+    },
+    "bank/MetaMask": {
+      "output": "rules/bank/MetaMask.list",
+      "rules": 1,
+      "sha256": "8139ada7c1031225003c59e25ccaba988e9aa7a9cf0183e525d8344c2acc52b3",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "source": "overrides/bank/MetaMask.list",
+          "parsed": 1,
+          "added": 1,
+          "rules_sha256": "f3698a2f9cde0ddbdd96afd77b60d939478bb291b3954c8aaaf7905d5007e823"
+        }
+      ]
+    },
+    "community/NodeSeek": {
+      "output": "rules/community/NodeSeek.list",
+      "rules": 1,
+      "sha256": "9dbc134d9ff3148a95bbdc748cb3082970562f50d110672cd0e3a0d67bc23137",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "source": "overrides/community/NodeSeek.list",
+          "parsed": 1,
+          "added": 1,
+          "rules_sha256": "5c3ea641727a202f4a9bf1d353ca1fe893e98ac121ace3fc21957ab82bd4db8c"
+        }
+      ]
+    },
+    "bank/WalletConnect": {
+      "output": "rules/bank/WalletConnect.list",
+      "rules": 1,
+      "sha256": "43c8559e0124f93178490582929c417cb00517d036d384d8012e5306e0f9fdd5",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "source": "overrides/bank/WalletConnect.list",
+          "parsed": 1,
+          "added": 1,
+          "rules_sha256": "65da1f4d30a77f7d42ba586ff9cb8d66e016ac9a69e3b57472d8911c3bb36ea1"
+        }
+      ]
+    },
+    "services/Grokipedia": {
+      "output": "rules/services/Grokipedia.list",
+      "rules": 1,
+      "sha256": "5bfe5890cc76b48f6994a8e497ee891d055e067b79920e22bc68f39763429220",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "source": "overrides/services/Grokipedia.list",
+          "parsed": 1,
+          "added": 1,
+          "rules_sha256": "014f4286d68a4a52d84d3dbba6f2ef0af3ec58aa70ad4d6e4cf409803991e122"
+        }
+      ]
+    },
+    "bank/UK-Banks": {
+      "output": "rules/bank/UK-Banks.list",
+      "rules": 60,
+      "sha256": "e0737167a486843263222fbc10b605daa27859ea367590925f1d52554400e232",
+      "sources": [
+        {
+          "name": "Migrated existing UK.list",
+          "source": "snapshots/UK-Banks-20261028.list",
+          "parsed": 50,
+          "added": 50,
+          "rules_sha256": "9add69700418ddb564a8ca15d4ad9099b40847909e541dad428e5ced48a02e1c",
+          "skipped": {
+            "DOMAIN-SUFFIX, online-metrix.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, yapily.com": "domain outside reviewed source selection",
+            "DOMAIN-KEYWORD, clearscore": "rule type outside source selection",
+            "DOMAIN-KEYWORD, barclays": "rule type outside source selection",
+            "DOMAIN-KEYWORD,myguava": "rule type outside source selection",
+            "DOMAIN-KEYWORD,guavapay": "rule type outside source selection",
+            "DOMAIN-SUFFIX, amazontrust.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, dynatrace.com": "domain outside reviewed source selection",
+            "DOMAIN-KEYWORD, lloydsbank": "rule type outside source selection",
+            "DOMAIN-KEYWORD, halifax": "rule type outside source selection",
+            "DOMAIN-SUFFIX, demdex.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, cm.everesttech.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, omtrdc.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, api.ipify.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, eu.intercom.io": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, verygoodvault.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, verygood.systems": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, appsflyer.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, branch.io": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, emb-api.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, stripe.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, sprig.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, stripe.uk": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, nonprod-ffs.io": "domain outside reviewed source selection",
+            "DOMAIN-KEYWORD, monzo": "rule type outside source selection",
+            "DOMAIN-SUFFIX, lemfi.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, customer.io": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, algolia.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, asnapieu.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, trading212.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, appsflyersdk.com": "domain outside reviewed source selection",
+            "DOMAIN-KEYWORD, trading212": "rule type outside source selection",
+            "DOMAIN-KEYWORD, newdaycards": "rule type outside source selection",
+            "DOMAIN-SUFFIX, browser-intake-datadoghq.eu": "domain outside reviewed source selection",
+            "DOMAIN-KEYWORD, nationwide": "rule type outside source selection",
+            "IP-CIDR, 185.203.72.0/22": "rule type outside source selection",
+            "DOMAIN-SUFFIX, fpjs.io": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, clarity.ms": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, app-analytics-services.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, co.uk": "domain outside reviewed source selection"
+          }
+        },
+        {
+          "name": "iniwex5 UK banking",
+          "source": "https://raw.githubusercontent.com/iniwex5/tools/main/rules/UK.list",
+          "parsed": 50,
+          "added": 0,
+          "rules_sha256": "9add69700418ddb564a8ca15d4ad9099b40847909e541dad428e5ced48a02e1c",
+          "skipped": {
+            "DOMAIN-SUFFIX, online-metrix.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, yapily.com": "domain outside reviewed source selection",
+            "DOMAIN-KEYWORD, clearscore": "rule type outside source selection",
+            "DOMAIN-KEYWORD, barclays": "rule type outside source selection",
+            "DOMAIN-KEYWORD,myguava": "rule type outside source selection",
+            "DOMAIN-KEYWORD,guavapay": "rule type outside source selection",
+            "DOMAIN-SUFFIX, amazontrust.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, dynatrace.com": "domain outside reviewed source selection",
+            "DOMAIN-KEYWORD, lloydsbank": "rule type outside source selection",
+            "DOMAIN-KEYWORD, halifax": "rule type outside source selection",
+            "DOMAIN-SUFFIX, demdex.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, cm.everesttech.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, omtrdc.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, api.ipify.org": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, eu.intercom.io": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, verygoodvault.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, verygood.systems": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, appsflyer.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, branch.io": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, emb-api.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, stripe.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, sprig.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, stripe.uk": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, nonprod-ffs.io": "domain outside reviewed source selection",
+            "DOMAIN-KEYWORD, monzo": "rule type outside source selection",
+            "DOMAIN-SUFFIX, lemfi.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, customer.io": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, algolia.net": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, asnapieu.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, trading212.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, appsflyersdk.com": "domain outside reviewed source selection",
+            "DOMAIN-KEYWORD, trading212": "rule type outside source selection",
+            "DOMAIN-KEYWORD, newdaycards": "rule type outside source selection",
+            "DOMAIN-SUFFIX, browser-intake-datadoghq.eu": "domain outside reviewed source selection",
+            "DOMAIN-KEYWORD, nationwide": "rule type outside source selection",
+            "IP-CIDR, 185.203.72.0/22": "rule type outside source selection",
+            "DOMAIN-SUFFIX, fpjs.io": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, clarity.ms": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, app-analytics-services.com": "domain outside reviewed source selection",
+            "DOMAIN-SUFFIX, co.uk": "domain outside reviewed source selection"
+          }
+        },
+        {
+          "name": "Existing UK bank-specific keyword/IP rules",
+          "source": "overrides/bank/UK-Banks.list",
+          "parsed": 10,
+          "added": 10,
+          "rules_sha256": "9a0545c48d0412a528bc765bbbf66e39ce2bd4200bd927e01d9416d63855e9ee"
         }
       ]
     }

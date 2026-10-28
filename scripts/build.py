@@ -16,9 +16,9 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def domain(value):
+def domain(value, allow_tld=False):
     value = value.lower().rstrip('.')
-    if len(value) > 253 or '.' not in value or not all(
+    if len(value) > 253 or ('.' not in value and not allow_tld) or not all(
         re.fullmatch(r'[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?', label)
         for label in value.split('.')
     ):
@@ -60,7 +60,7 @@ def loon_rule(line):
             normalized.append('(' + loon_rule(child[1:-1]) + ')')
         return kind + ',(' + ','.join(normalized) + ')'
     if kind in {'DOMAIN', 'DOMAIN-SUFFIX'} and len(parts) == 2:
-        return kind + ',' + domain(parts[1])
+        return kind + ',' + domain(parts[1], allow_tld=kind == 'DOMAIN-SUFFIX')
     if kind == 'DOMAIN-KEYWORD' and len(parts) == 2 and re.fullmatch(r'[a-zA-Z0-9._-]+', parts[1]):
         return kind + ',' + parts[1].lower()
     if kind == 'GEOIP' and len(parts) in {2, 3} and re.fullmatch(r'[A-Za-z]{2}', parts[1]):
@@ -84,6 +84,12 @@ def loon_rule(line):
         if len(parts) == 3 and parts[2] != 'no-resolve':
             raise ValueError(f'Unexpected policy or option: {line}')
         return ','.join([kind, str(network)] + parts[2:])
+    if kind == 'IP-ASN' and len(parts) in {2, 3}:
+        if not re.fullmatch(r'\d+', parts[1]) or not 1 <= int(parts[1]) <= 4294967295:
+            raise ValueError(f'Invalid ASN: {line}')
+        if len(parts) == 3 and parts[2] != 'no-resolve':
+            raise ValueError(f'Unexpected ASN option: {line}')
+        return ','.join([kind, str(int(parts[1]))] + parts[2:])
     raise ValueError(f'Unsupported or policy-bearing Loon rule: {line}')
 
 

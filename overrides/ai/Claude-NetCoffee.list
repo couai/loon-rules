@@ -1,0 +1,60 @@
+# Migrated from https://image-1251506627.cos.ap-shanghai.myqcloud.com/image/Claude-NetCoffee.list
+# Claude / Anthropic - Loon 订阅规则
+# 来源：https://ip.net.coffee/claude/site.html
+# geosite 展开来源：https://github.com/v2fly/domain-list-community/tree/master/data
+# 生成日期：2026-10-27（Asia/Shanghai）
+# 内容：原页面 22 条规则 + sentry 关键词 + geosite:anthropic 去重补充。
+# 此文件不带策略；添加到 [Remote Rule] 时必须显式绑定 policy。
+# 用法：<本文件的 HTTP(S) 地址>, policy=人工智能策略, tag=Claude-NetCoffee, enabled=true
+# 关键词及第三方域名规则会作用于所有应用，不仅 Claude。
+# no-resolve：不为匹配这条 IP 规则额外解析域名；保留源规则语义。
+# NTP 分类另见 Claude-NTP-optional.list，本文件未合并。
+# 推荐置于通用 AI/地区规则之前；最终命中仍取决于其他本地和插件规则。
+
+# 核心域名（DOMAIN-SUFFIX 已覆盖所有 *.anthropic.com 子域名）
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,clau.de
+DOMAIN-SUFFIX,claudemcpclient.com
+DOMAIN-SUFFIX,claudemcpcontent.com
+DOMAIN-SUFFIX,claudeusercontent.com
+
+# CDN 和静态资源
+DOMAIN,servd-anthropic-website.b-cdn.net
+DOMAIN,anthropic.com.cdn.cloudflare.net
+
+# 认证 / 内容
+DOMAIN,anthropic.auth0.com
+DOMAIN,anthropic-com.ghost.io
+
+# 监控和遥测
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,statsigapi.net
+DOMAIN,browser-intake-us5-datadoghq.com
+DOMAIN-KEYWORD,datadog
+DOMAIN-KEYWORD,sentry
+DOMAIN-KEYWORD,sift
+
+# 客服 / 第三方 widget
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN,cdn.usefathom.com
+
+# geosite:anthropic 补充（v2fly/domain-list-community，2026-10-27 快照）
+DOMAIN-SUFFIX,ant.dev
+DOMAIN-SUFFIX,anthropic.team
+DOMAIN-SUFFIX,antspace.dev
+DOMAIN-SUFFIX,chatbotclaude.com
+DOMAIN-SUFFIX,claude.app
+DOMAIN-SUFFIX,claude.dev
+DOMAIN-SUFFIX,claude.new
+DOMAIN-SUFFIX,claude.site
+DOMAIN-SUFFIX,claudeacademy.com
+DOMAIN-SUFFIX,claudepages.dev
+DOMAIN-SUFFIX,claudestudio.com
+
+# IP 段 / ASN 兜底
+IP-CIDR,160.79.104.0/21,no-resolve
+IP-CIDR6,2607:6bc0::/32,no-resolve
+IP-ASN,399358,no-resolve

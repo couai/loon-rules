@@ -516,6 +516,363 @@
         }
       ],
       "preserve_source": "overrides/bank/Sumsub.list"
+    },
+    "ai/Claude-NTP": {
+      "output": "rules/ai/Claude-NTP.list",
+      "sources": [
+        {
+          "name": "Migrated existing ai/Claude-NTP",
+          "path": "overrides/ai/Claude-NTP.list",
+          "format": "loon",
+          "min_rules": 116
+        }
+      ],
+      "preserve_source": "overrides/ai/Claude-NTP.list"
+    },
+    "ai/Claude-NetCoffee": {
+      "output": "rules/ai/Claude-NetCoffee.list",
+      "sources": [
+        {
+          "name": "Migrated existing ai/Claude-NetCoffee",
+          "path": "overrides/ai/Claude-NetCoffee.list",
+          "format": "loon",
+          "min_rules": 34
+        }
+      ],
+      "preserve_source": "overrides/ai/Claude-NetCoffee.list"
+    },
+    "services/Oracle-Loon": {
+      "output": "rules/services/Oracle-Loon.list",
+      "sources": [
+        {
+          "name": "Migrated existing services/Oracle-Loon",
+          "path": "overrides/services/Oracle-Loon.list",
+          "format": "loon",
+          "min_rules": 25
+        }
+      ],
+      "preserve_source": "overrides/services/Oracle-Loon.list"
+    },
+    "ai/AnyRouter": {
+      "output": "rules/ai/AnyRouter.list",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "path": "overrides/ai/AnyRouter.list",
+          "format": "loon",
+          "min_rules": 1
+        }
+      ],
+      "preserve_source": "overrides/ai/AnyRouter.list"
+    },
+    "community/LinuxDo": {
+      "output": "rules/community/LinuxDo.list",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "path": "overrides/community/LinuxDo.list",
+          "format": "loon",
+          "min_rules": 1
+        }
+      ],
+      "preserve_source": "overrides/community/LinuxDo.list"
+    },
+    "services/Railway": {
+      "output": "rules/services/Railway.list",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "path": "overrides/services/Railway.list",
+          "format": "loon",
+          "min_rules": 1
+        }
+      ],
+      "preserve_source": "overrides/services/Railway.list"
+    },
+    "services/PingMe": {
+      "output": "rules/services/PingMe.list",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "path": "overrides/services/PingMe.list",
+          "format": "loon",
+          "min_rules": 1
+        }
+      ],
+      "preserve_source": "overrides/services/PingMe.list"
+    },
+    "bank/Bycsi": {
+      "output": "rules/bank/Bycsi.list",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "path": "overrides/bank/Bycsi.list",
+          "format": "loon",
+          "min_rules": 1
+        }
+      ],
+      "preserve_source": "overrides/bank/Bycsi.list"
+    },
+    "community/V2EX": {
+      "output": "rules/community/V2EX.list",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "path": "overrides/community/V2EX.list",
+          "format": "loon",
+          "min_rules": 1
+        }
+      ],
+      "preserve_source": "overrides/community/V2EX.list"
+    },
+    "ai/Dzmm": {
+      "output": "rules/ai/Dzmm.list",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "path": "overrides/ai/Dzmm.list",
+          "format": "loon",
+          "min_rules": 1
+        }
+      ],
+      "preserve_source": "overrides/ai/Dzmm.list"
+    },
+    "services/AppleSafeBrowsing": {
+      "output": "rules/services/AppleSafeBrowsing.list",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "path": "overrides/services/AppleSafeBrowsing.list",
+          "format": "loon",
+          "min_rules": 1
+        }
+      ],
+      "preserve_source": "overrides/services/AppleSafeBrowsing.list"
+    },
+    "carrier/O2-DE": {
+      "output": "rules/carrier/O2-DE.list",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "path": "overrides/carrier/O2-DE.list",
+          "format": "loon",
+          "min_rules": 1
+        }
+      ],
+      "preserve_source": "overrides/carrier/O2-DE.list"
+    },
+    "bank/Zopa": {
+      "output": "rules/bank/Zopa.list",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "path": "overrides/bank/Zopa.list",
+          "format": "loon",
+          "min_rules": 1
+        }
+      ],
+      "preserve_source": "overrides/bank/Zopa.list"
+    },
+    "bank/PetaFuel": {
+      "output": "rules/bank/PetaFuel.list",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "path": "overrides/bank/PetaFuel.list",
+          "format": "loon",
+          "min_rules": 1
+        }
+      ],
+      "preserve_source": "overrides/bank/PetaFuel.list"
+    },
+    "bank/MetaMask": {
+      "output": "rules/bank/MetaMask.list",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "path": "overrides/bank/MetaMask.list",
+          "format": "loon",
+          "min_rules": 1
+        }
+      ],
+      "preserve_source": "overrides/bank/MetaMask.list"
+    },
+    "community/NodeSeek": {
+      "output": "rules/community/NodeSeek.list",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "path": "overrides/community/NodeSeek.list",
+          "format": "loon",
+          "min_rules": 1
+        }
+      ],
+      "preserve_source": "overrides/community/NodeSeek.list"
+    },
+    "bank/WalletConnect": {
+      "output": "rules/bank/WalletConnect.list",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "path": "overrides/bank/WalletConnect.list",
+          "format": "loon",
+          "min_rules": 1
+        }
+      ],
+      "preserve_source": "overrides/bank/WalletConnect.list"
+    },
+    "services/Grokipedia": {
+      "output": "rules/services/Grokipedia.list",
+      "sources": [
+        {
+          "name": "Local public service override",
+          "path": "overrides/services/Grokipedia.list",
+          "format": "loon",
+          "min_rules": 1
+        }
+      ],
+      "preserve_source": "overrides/services/Grokipedia.list"
+    },
+    "bank/UK-Banks": {
+      "output": "rules/bank/UK-Banks.list",
+      "sources": [
+        {
+          "name": "Migrated existing UK.list",
+          "path": "snapshots/UK-Banks-20261028.list",
+          "format": "loon",
+          "min_rules": 40,
+          "include_rule_types": [
+            "DOMAIN",
+            "DOMAIN-SUFFIX"
+          ],
+          "include_domains": [
+            "wise.com",
+            "skrill.com",
+            "skrill.uk",
+            "chase.com",
+            "chase.uk",
+            "chase.co.uk",
+            "creditkarma.co.uk",
+            "totallymoney.uk",
+            "totallymoney.com",
+            "clearscore.com",
+            "checkmyfile.com",
+            "hellopillar.com",
+            "pillar.money",
+            "experian.co.uk",
+            "experianidentityservice.co.uk",
+            "barclays.co.uk",
+            "barclays.com",
+            "barclays.mobi",
+            "barclaysuk.sc.omtrdc.net",
+            "bclays-ads.aimatch.com",
+            "guavapay.com",
+            "lloydsbank.co.uk",
+            "bankofscotland.co.uk",
+            "tsb.co.uk",
+            "ifastgb.com",
+            "wuzo.co.uk",
+            "wuzo.com",
+            "payzilch.com",
+            "curve.app",
+            "imaginecurve.com",
+            "monzo-alt.net",
+            "monzo.com",
+            "monzo.statuspage.io",
+            "monzo.me",
+            "freetrade.io",
+            "newdaycards.com",
+            "moneyboxapp.com",
+            "paysend.io",
+            "hsbc.co.uk",
+            "topcashback.com",
+            "kroo.com",
+            "uphold.com",
+            "yondercard.com",
+            "jaja.finance",
+            "jaja.co.uk",
+            "jajafin-dataplane.rudderstack.com",
+            "nationwide.co.uk",
+            "nationwidemortgages.co.uk",
+            "altery.com",
+            "sumup.com"
+          ]
+        },
+        {
+          "name": "iniwex5 UK banking",
+          "url": "https://raw.githubusercontent.com/iniwex5/tools/main/rules/UK.list",
+          "format": "loon",
+          "min_rules": 40,
+          "include_rule_types": [
+            "DOMAIN",
+            "DOMAIN-SUFFIX"
+          ],
+          "include_domains": [
+            "wise.com",
+            "skrill.com",
+            "skrill.uk",
+            "chase.com",
+            "chase.uk",
+            "chase.co.uk",
+            "creditkarma.co.uk",
+            "totallymoney.uk",
+            "totallymoney.com",
+            "clearscore.com",
+            "checkmyfile.com",
+            "hellopillar.com",
+            "pillar.money",
+            "experian.co.uk",
+            "experianidentityservice.co.uk",
+            "barclays.co.uk",
+            "barclays.com",
+            "barclays.mobi",
+            "barclaysuk.sc.omtrdc.net",
+            "bclays-ads.aimatch.com",
+            "guavapay.com",
+            "lloydsbank.co.uk",
+            "bankofscotland.co.uk",
+            "tsb.co.uk",
+            "ifastgb.com",
+            "wuzo.co.uk",
+            "wuzo.com",
+            "payzilch.com",
+            "curve.app",
+            "imaginecurve.com",
+            "monzo-alt.net",
+            "monzo.com",
+            "monzo.statuspage.io",
+            "monzo.me",
+            "freetrade.io",
+            "newdaycards.com",
+            "moneyboxapp.com",
+            "paysend.io",
+            "hsbc.co.uk",
+            "topcashback.com",
+            "kroo.com",
+            "uphold.com",
+            "yondercard.com",
+            "jaja.finance",
+            "jaja.co.uk",
+            "jajafin-dataplane.rudderstack.com",
+            "nationwide.co.uk",
+            "nationwidemortgages.co.uk",
+            "altery.com",
+            "sumup.com"
+          ]
+        },
+        {
+          "name": "Existing UK bank-specific keyword/IP rules",
+          "path": "overrides/bank/UK-Banks.list",
+          "format": "loon",
+          "min_rules": 10
+        }
+      ],
+      "preserve_source": "overrides/bank/UK-Banks.list",
+      "required_rules": [
+        "DOMAIN-SUFFIX,wise.com",
+        "DOMAIN-SUFFIX,monzo.com",
+        "DOMAIN-SUFFIX,barclays.co.uk"
+      ]
     }
   }
 }

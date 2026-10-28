@@ -9,7 +9,7 @@
 | AI | `rules/AI-Combined.list` | MetaCubeX、models.dev、可莉快照与手工补充 |
 | WiFi Calling 英国/香港/德国/美国 | `rules/wificall/` | 现有规则 + HenryChiao 对应国家规则 |
 | 香港运营商 App | `rules/carrier/` | 现有自维护规则 |
-| 英国银行合集 | `rules/bank/UK.list` | 原 UK 快照 + iniwex5 实时来源 |
+| 英国银行精简合集 | `rules/bank/UK-Banks.list` | 原快照 + iniwex5，限定银行域名；原有银行品牌关键词/IP |
 | 各银行、支付与交易服务 | `rules/bank/` | 现有规则 + 按服务筛选的公开上游 |
 
 迁入的自维护内容放在 `overrides/<分类>/`，保留原注释和来源。原英国合集放在 `snapshots/`。每次构建合并这些文件与公开来源；公开来源每 6 小时刷新，自维护文件需要自行编辑。数量、来源贡献和跳过原因见 [manifest](../reports/manifest.json)。
@@ -21,31 +21,36 @@
 - [blackmatrix7 OKX](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Loon/OKX)、[MetaCubeX Kraken](https://github.com/MetaCubeX/meta-rules-dat/blob/meta/geo/geosite/kraken.list)：合并对应服务的公开列表。
 - [xOS N26](https://github.com/xOS/Config/blob/Her/RuleSet/N26.list)：选择精确域名与域名后缀，不采用 `*26.de` 通配规则。
 - [LeiyuG Coinbase](https://github.com/LeiyuG/Surge/blob/main/rules/Coinbase.list)、[Bitget](https://github.com/LeiyuG/Surge/blob/main/rules/Bitget.list)：选择明确的服务/CDN 域名，排除本次未确认范围的共享分析、认证域名及泛关键词。
-- [iniwex5 UK](https://github.com/iniwex5/tools/blob/main/rules/UK.list)：原有英国银行上游，继续同步，保留原分类范围。
+- [iniwex5 UK](https://github.com/iniwex5/tools/blob/main/rules/UK.list)：新 UK-Banks 只同步 50 个已审核的银行/金融服务域名及子域名，另保留 9 条银行品牌关键词和 1 条原 IP 规则。旧 UK 保留兼容，不再用于本机。
 
 没有采用 xOS Bybit 的泛通配及共享 `rudderlabs.com`：这些会扩大匹配范围，现有 Bybit 规则也明确把一批类似域名列在待确认注释中。需要真实请求记录支持后再增补。
 
 ## 仍需留意的现有重叠
 
-以下是迁移前已有的行为，本次保持不变：
+以下重叠需要区分处理：
 
-- `UK.list` 含 `co.uk`、Stripe、LemFi、Trading212 和部分共享服务，且位于独立银行订阅前。因此它可能优先命中这些请求；各订阅的策略名相近也不代表完全相同。
+- 旧 `UK.list` 的 90 条精简为 `UK-Banks.list` 的 60 条：删除 `co.uk`、Stripe、LemFi、Trading212、共享统计/验证服务等 30 条，保留银行域名、品牌关键词与原 IP 规则。Stripe 使用现有独立订阅并放在 OpenAI 前；LemFi、Trading212 使用各自独立订阅。不要同时启用新旧 UK 列表。
 - 香港运营商 App 列表包含 `googleapis.com`、`gstatic.com`、Appsflyer、Branch、Adjust 等共享域名，并且位于 WiFi Calling 和银行规则前；其中 `wlan.three.com.hk` 会优先走运营商 App 的策略。
 - WiFi Calling US 包含一些 App/统计辅助域名。此次保留原有覆盖，未擅自缩减。
 
 以后收窄这些范围时，应作为独立分流调整，先用实际流量验证，避免把地址迁移和出口行为变更混在一起。
 
-## 本地规则后续归档建议
+## 本地规则归档结果（2026-10-28）
 
-| 类别 | 适合进入公共仓库的内容 | 处理建议 |
-|---|---|---|
-| 现有自维护远程列表 | Claude-NetCoffee、Claude-NTP、Oracle-Loon | 可继续迁入独立 `rules/ai/`、`rules/services/`，保持各自策略 |
-| 银行与钱包补充 | Zopa、PetaFuel、MetaMask、WalletConnect、Bycsi | 可按服务建补充列表；迁移前核对与现有银行订阅的覆盖和优先级 |
-| 通用公开网站 | Linux.do、V2EX、NodeSeek、Railway、Grokipedia 等 | 按用途建小列表；出口策略继续由客户端指定 |
-| AI 本地补丁 | `metaaivm.com` | AI-Combined 已包含；可评估删除重复项 |
-| 重复后缀 | `fh-static.bycsi.com` 与 `bycsi.com` | 两者当前策略一致，前者已被后者覆盖，可在单独清理时删去 |
-| 本机与个人网络 | 家庭/公司网段、场景策略、自建服务、DNS 引导与出口 | 留在客户端，不放入公共规则仓库 |
+| 类别 | 处理结果 |
+|---|---|
+| Claude-NetCoffee / Claude-NTP / Oracle-Loon | 独立文件迁入 `rules/ai/`、`rules/services/`；34 / 116 / 25 条全部保留；客户端原位置替换 URL |
+| Zopa / PetaFuel / MetaMask / WalletConnect / Bycsi | 5 份独立 `rules/bank/` 补充；保留原策略 |
+| Linux.do / V2EX / NodeSeek | 3 份 `rules/community/`；保留原精确域名或后缀语义 |
+| AnyRouter / Dzmm / Railway / PingMe / AppleSafeBrowsing / O2-DE / Grokipedia | 7 份独立服务补充；保留各自原策略 |
+| `metaaivm.com` / `fh-static.bycsi.com` | 清除本地冗余，分别由 AI-Combined / Bycsi 覆盖 |
+| Google Ads 本地例外 | 留在本地；迁到订阅会被现有广告插件优先 REJECT |
+| 本机与个人网络、DNS 引导、个人端点 | 留在客户端，未上传完整配置；用途未确认的独立 API 端点也留在客户端 |
 
-本地规则优先级高于订阅规则，因此把 `[Rule]` 项移动到远程订阅可能改变实际命中。此次只迁移已经是远程订阅的 27 项，其余作为后续整理建议，未改动本地规则。参考 [Loon 匹配优先级](https://nsloon.app/docs/Rule/)。
+15 份原本地补充按原相对顺序放在订阅区开头；原有订阅保持相对顺序，唯独 Stripe 明确提到 OpenAI 前以落实其原策略。Loon 的本地 > 插件 > 订阅来源优先级不会因 URL 的文本位置改变，见 [官方说明](https://nsloon.app/docs/Rule/)。切换前检查了现有插件重叠，并对比迁移前后代表请求的策略。
+
+Claude-NTP 是通用时间服务列表，含国内和国外地址，并非只有 Claude 或海外服务；继续沿用原人工智能策略，未擅自删减。Claude-NetCoffee 保留原第三方域名/关键词、IP-ASN 与 no-resolve；Oracle 保留 `.java` 和 `.oracle` 顶级域名后缀。它们是自维护快照，编辑 overrides 后由六小时工作流重建；不会自动重新抓取 NetCoffee 网页。
+
+Oracle-Loon 与本机另一份 Oracle.lsr 的当前 25 条内容相同。保留两份及原顺序后，请求可继续先命中 Oracle.lsr 的 DIRECT；以新订阅实际加载内容确认迁移生效，不声称它一定抢先命中。
 
 验证包括公开订阅可读取、每项保留原规则、Loon 实际加载内容及代表性分流请求。WiFi Calling 的分流验证不等于 SIM 注册或实际通话成功。

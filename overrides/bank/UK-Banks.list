@@ -1,0 +1,13 @@
+# Bank-specific keyword/IP rules retained from the existing UK snapshot.
+# Public source: https://github.com/iniwex5/tools/blob/main/rules/UK.list
+# Shared service domains and the co.uk catch-all are excluded in sources.json.
+DOMAIN-KEYWORD,clearscore
+DOMAIN-KEYWORD,barclays
+DOMAIN-KEYWORD,myguava
+DOMAIN-KEYWORD,guavapay
+DOMAIN-KEYWORD,lloydsbank
+DOMAIN-KEYWORD,halifax
+DOMAIN-KEYWORD,monzo
+DOMAIN-KEYWORD,newdaycards
+DOMAIN-KEYWORD,nationwide
+IP-CIDR,185.203.72.0/22

@@ -17,3 +17,10 @@
 - **xOS/Config**、**LeiyuG/Surge**：分别使用 N26、Coinbase/Bitget 的公开规则，并进行域名或类型筛选；原项目链接见 [整理说明](docs/rule-organization.md)。这些来源及 iniwex5/tools 的仓库 API 未标示许可证，本仓库不为它们另行授予 MIT 许可。
 
 各分类输出保留来源署名链接；没有将第三方规则整体重新授权为本项目原创代码的许可。
+
+## Claude、Oracle 和本地公开服务归档
+
+- Claude-NetCoffee、Claude-NTP 与 Oracle-Loon 从所有者现有 COS 订阅原样迁入，原 URL、说明与注释见对应 `overrides/ai/`、`overrides/services/`。本次未将它们设为自动抓取网页的动态来源；后续修改源文件即可由现有工作流发布。
+- Claude 规则参考 [NetCoffee 页面](https://ip.net.coffee/claude/site.html)，并使用 [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community) 的 anthropic/category-ntp 分类（2026-10-27 快照），保留 [MIT 许可](licenses/v2fly-MIT.txt)。
+- UK-Banks 从原 UK 快照和 iniwex5 实时列表中按审核过的银行域名筛选；原有银行品牌关键词和 IP 单独保留。旧 UK.list 继续保留兼容，不能把它和 UK-Banks 同时启用。
+- 15 份公开服务补充来自所有者现有本地 DOMAIN/DOMAIN-SUFFIX 规则，保留原匹配范围，不包含出口节点或完整个人配置。

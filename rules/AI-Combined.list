@@ -1,6 +1,6 @@
 # AI-Combined — generated; edit sources.json or overrides instead.
 # Sources and attribution: https://github.com/couai/loon-rules/blob/main/NOTICE.md
-# Rules: 439
+# Rules: 440
 DOMAIN,ai.google.dev
 DOMAIN,alkalicore-pa.clients6.google.com
 DOMAIN,alkalimakersuite-pa.clients6.google.com
@@ -303,6 +303,7 @@ DOMAIN,models.mixlayer.ai
 DOMAIN,inference.us-west.modal.direct
 DOMAIN,api.modeloracle.com
 DOMAIN,modelishub.com
+DOMAIN,api.modular.com
 DOMAIN,api.moonshot.ai
 DOMAIN,api.morphllm.com
 DOMAIN,api.eu.munito.ai

@@ -10,6 +10,15 @@ from scripts.build import ROOT, build, loon_rule, model_rules, selected_text_rul
 
 
 class RuleTests(unittest.TestCase):
+    def test_slim_uk_keeps_banks_without_shared_or_separate_services(self):
+        rules = text_rules((ROOT / 'rules/bank/UK-Banks.list').read_text(), 'loon')
+        for domain in ['co.uk', 'stripe.com', 'stripe.uk', 'lemfi.com', 'trading212.com',
+                       'appsflyer.com', 'branch.io', 'amazontrust.com', 'dynatrace.com', 'omtrdc.net']:
+            self.assertFalse(any(rule.split(',')[1] == domain for rule in rules), domain)
+        for rule in ['DOMAIN-SUFFIX,wise.com', 'DOMAIN-SUFFIX,monzo.com',
+                     'DOMAIN-SUFFIX,barclays.co.uk', 'DOMAIN-KEYWORD,halifax']:
+            self.assertIn(rule, rules)
+
     def test_migrated_collections_preserve_baseline_rules(self):
         config = json.loads((ROOT / 'sources.json').read_text())
         for name, collection in config['collections'].items():
@@ -56,6 +65,15 @@ class RuleTests(unittest.TestCase):
     def test_ip_options_preserved(self):
         self.assertEqual(loon_rule('IP-CIDR6, 2607:6bc0::/48, no-resolve'),
                          'IP-CIDR6,2607:6bc0::/48,no-resolve')
+
+    def test_asn_and_tld_suffix_preserved(self):
+        self.assertEqual(loon_rule('IP-ASN, 399358, no-resolve'), 'IP-ASN,399358,no-resolve')
+        self.assertEqual(loon_rule('DOMAIN-SUFFIX,java'), 'DOMAIN-SUFFIX,java')
+        self.assertEqual(loon_rule('DOMAIN-SUFFIX,oracle'), 'DOMAIN-SUFFIX,oracle')
+        for bad in ['IP-ASN,0', 'IP-ASN,4294967296', 'IP-ASN,-1',
+                    'IP-ASN,399358,DIRECT', 'DOMAIN,oracle', 'DOMAIN-SUFFIX,-bad']:
+            with self.subTest(bad=bad), self.assertRaises(ValueError):
+                loon_rule(bad)
 
     def test_vowifi_nested_logic_preserves_country_udp_and_ports(self):
         rule = 'AND,((GEOIP,GB),(AND,((PROTOCOL,UDP),(OR,((DEST-PORT,500),(DEST-PORT,4500))))))'
