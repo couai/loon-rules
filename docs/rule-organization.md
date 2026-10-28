@@ -37,6 +37,8 @@
 
 ## 本地规则归档结果（2026-10-28）
 
+按使用偏好，15 条单条公开服务规则已恢复到客户端 `[Rule]`，对应独立订阅已移除；仓库文件仅作归档。恢复原策略及本地顺序，Claude、Oracle 和 UK-Banks 等整份订阅继续使用。
+
 | 类别 | 处理结果 |
 |---|---|
 | Claude-NetCoffee / Claude-NTP / Oracle-Loon | 独立文件迁入 `rules/ai/`、`rules/services/`；34 / 116 / 25 条全部保留；客户端原位置替换 URL |
@@ -47,7 +49,7 @@
 | Google Ads 本地例外 | 留在本地；迁到订阅会被现有广告插件优先 REJECT |
 | 本机与个人网络、DNS 引导、个人端点 | 留在客户端，未上传完整配置；用途未确认的独立 API 端点也留在客户端 |
 
-15 份原本地补充按原相对顺序放在订阅区开头；原有订阅保持相对顺序，唯独 Stripe 明确提到 OpenAI 前以落实其原策略。Loon 的本地 > 插件 > 订阅来源优先级不会因 URL 的文本位置改变，见 [官方说明](https://nsloon.app/docs/Rule/)。切换前检查了现有插件重叠，并对比迁移前后代表请求的策略。
+15 条补充当前按原顺序放回本地规则；Stripe 继续位于 OpenAI 前，使用原手动选择策略。Loon 的本地 > 插件 > 订阅来源优先级不会因 URL 的文本位置改变，见 [官方说明](https://nsloon.app/docs/Rule/)。切换前检查了现有插件重叠，并对比迁移前后代表请求的策略。
 
 Claude-NTP 是通用时间服务列表，含国内和国外地址，并非只有 Claude 或海外服务；继续沿用原人工智能策略，未擅自删减。Claude-NetCoffee 保留原第三方域名/关键词、IP-ASN 与 no-resolve；Oracle 保留 `.java` 和 `.oracle` 顶级域名后缀。它们是自维护快照，编辑 overrides 后由六小时工作流重建；不会自动重新抓取 NetCoffee 网页。
 
