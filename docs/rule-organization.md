@@ -35,21 +35,11 @@
 
 以后收窄这些范围时，应作为独立分流调整，先用实际流量验证，避免把地址迁移和出口行为变更混在一起。
 
-## 本地规则归档结果（2026-10-28）
+## Claude 与 Oracle 订阅
 
-按使用偏好，15 条单条公开服务规则已恢复到客户端 `[Rule]`，对应独立订阅已移除；仓库文件仅作归档。恢复原策略及本地顺序，Claude、Oracle 和 UK-Banks 等整份订阅继续使用。
+Claude-NetCoffee、Claude-NTP、Oracle-Loon 已迁入独立 `rules/ai/`、`rules/services/` 文件，分别保留 34、116、25 条规则；客户端原位置替换 URL，保留原策略。
 
-| 类别 | 处理结果 |
-|---|---|
-| Claude-NetCoffee / Claude-NTP / Oracle-Loon | 独立文件迁入 `rules/ai/`、`rules/services/`；34 / 116 / 25 条全部保留；客户端原位置替换 URL |
-| Zopa / PetaFuel / MetaMask / WalletConnect / Bycsi | 5 份独立 `rules/bank/` 补充；保留原策略 |
-| Linux.do / V2EX / NodeSeek | 3 份 `rules/community/`；保留原精确域名或后缀语义 |
-| AnyRouter / Dzmm / Railway / PingMe / AppleSafeBrowsing / O2-DE / Grokipedia | 7 份独立服务补充；保留各自原策略 |
-| `metaaivm.com` / `fh-static.bycsi.com` | 清除本地冗余，分别由 AI-Combined / Bycsi 覆盖 |
-| Google Ads 本地例外 | 留在本地；迁到订阅会被现有广告插件优先 REJECT |
-| 本机与个人网络、DNS 引导、个人端点 | 留在客户端，未上传完整配置；用途未确认的独立 API 端点也留在客户端 |
-
-15 条补充当前按原顺序放回本地规则；Stripe 继续位于 OpenAI 前，使用原手动选择策略。Loon 的本地 > 插件 > 订阅来源优先级不会因 URL 的文本位置改变，见 [官方说明](https://nsloon.app/docs/Rule/)。切换前检查了现有插件重叠，并对比迁移前后代表请求的策略。
+单条网站和钱包补充由客户端 `[Rule]` 管理，仓库不保留拆分文件或生成配置。本地广告例外、个人端点、DNS 引导和场景网段也由客户端维护。Loon 的本地 > 插件 > 订阅来源优先级见 [官方说明](https://nsloon.app/docs/Rule/)。
 
 Claude-NTP 是通用时间服务列表，含国内和国外地址，并非只有 Claude 或海外服务；继续沿用原人工智能策略，未擅自删减。Claude-NetCoffee 保留原第三方域名/关键词、IP-ASN 与 no-resolve；Oracle 保留 `.java` 和 `.oracle` 顶级域名后缀。它们是自维护快照，编辑 overrides 后由六小时工作流重建；不会自动重新抓取 NetCoffee 网页。
 
