@@ -1,6 +1,6 @@
 # wificall/Wifi-Call-US — generated; edit sources.json or overrides instead.
 # Sources and attribution: https://github.com/couai/loon-rules/blob/main/NOTICE.md
-# Rules: 61
+# Rules: 51
 AND,((GEOIP,US),(AND,((PROTOCOL,UDP),(OR,((DEST-PORT,500),(DEST-PORT,4500))))))
 DOMAIN-KEYWORD,mcc310
 DOMAIN-KEYWORD,mcc311
@@ -16,8 +16,6 @@ DOMAIN-KEYWORD,t-mobile
 DOMAIN-SUFFIX,ultramobile.com
 DOMAIN-SUFFIX,redirect.ultra.me
 DOMAIN-SUFFIX,mvnoc.ai
-DOMAIN-SUFFIX,mzstatic.com
-DOMAIN-SUFFIX,optimizely.com
 IP-CIDR,66.94.0.0/19,no-resolve
 IP-CIDR,206.29.177.36/32,no-resolve
 IP-CIDR,208.54.0.0/16,no-resolve
@@ -33,17 +31,9 @@ DOMAIN-SUFFIX,ss.epdg.epc.geo.mnc480.mcc311.pub.3gppnetwork.org
 DOMAIN-SUFFIX,epdg.epc.mnc120.mcc310.pub.3gppnetwork.org
 DOMAIN-SUFFIX,ss.epdg.epc.mnc120.mcc310.pub.3gppnetwork.org
 DOMAIN-SUFFIX,ss.epdg.epc.geo.mnc120.mcc310.pub.3gppnetwork.org
-DOMAIN-SUFFIX,mobilefuse.com
-DOMAIN-SUFFIX,inmobi.com
-DOMAIN-SUFFIX,crashlytics.com
 DOMAIN-SUFFIX,talkatone.com
-DOMAIN-SUFFIX,kochava.com
 DOMAIN-SUFFIX,tktn.be
 DOMAIN-SUFFIX,tktn.at
-DOMAIN-SUFFIX,cohere.com
-DOMAIN-SUFFIX,ip-api.com
-DOMAIN-SUFFIX,agkn.com
-DOMAIN-SUFFIX,inner-active.mobi
 IP-CIDR,50.117.27.0/24,no-resolve
 IP-CIDR,69.46.75.0/24,no-resolve
 IP-CIDR,205.164.56.0/24,no-resolve

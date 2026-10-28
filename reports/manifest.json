@@ -125,29 +125,29 @@
     },
     "carrier/HK-Carrier-App": {
       "output": "rules/carrier/HK-Carrier-App.list",
-      "rules": 41,
-      "sha256": "4cd30d5eeef6097e66f0468b9aeabb75b94ceda9f77130caa3f371674097e1bb",
+      "rules": 22,
+      "sha256": "f6141b86bcc236e4613bbe4bc516aff886303d0d361315350b8c1837ccc7f049",
       "sources": [
         {
           "name": "Migrated existing HK-Carrier-App.list",
           "source": "overrides/carrier/HK-Carrier-App.list",
-          "parsed": 41,
-          "added": 41,
-          "rules_sha256": "69bcc7adb10f80943672ad1ab74bc7f51aa5927ec2aafa94f9445d22feb4bcab"
+          "parsed": 22,
+          "added": 22,
+          "rules_sha256": "934b6082cb6808d4692b779d54d760dbb94c7a9e2207ce20cac4ef85e07c115d"
         }
       ]
     },
     "wificall/Wifi-Call-UK": {
       "output": "rules/wificall/Wifi-Call-UK.list",
-      "rules": 33,
-      "sha256": "85c19e6771bd9e9047c76a28fa5038e57f4991c08c470178da6a1ab40de128b5",
+      "rules": 32,
+      "sha256": "bba86a6d4b1594645adf8cd7b8faa9ecb34497945ae8d3e98a35c5158c5207e5",
       "sources": [
         {
           "name": "Migrated existing Wifi-Call-UK.list",
           "source": "overrides/wificall/Wifi-Call-UK.list",
-          "parsed": 17,
-          "added": 17,
-          "rules_sha256": "8d814b08f9e9e3b6735f586b874ade105773d6c19aaab8119d2cd2f6ce51db7b"
+          "parsed": 16,
+          "added": 16,
+          "rules_sha256": "81d46b317046aed534e3cb6dd9e448657f7a00ecab6e1c1296b52a35241ba2fe"
         },
         {
           "name": "HenryChiao WiFi Calling UK",
@@ -211,15 +211,15 @@
     },
     "wificall/Wifi-Call-US": {
       "output": "rules/wificall/Wifi-Call-US.list",
-      "rules": 61,
-      "sha256": "e9aecd88421358dd15b0ae85fa9d0de77c15e7758b4d33c2a6b08800660ca8c8",
+      "rules": 51,
+      "sha256": "a8a506259d8f33cee3bf39780941772ef13431c87e959c70a43ec869fb5f1573",
       "sources": [
         {
           "name": "Migrated existing Wifi-Call-US.list",
           "source": "overrides/wificall/Wifi-Call-US.list",
-          "parsed": 48,
-          "added": 48,
-          "rules_sha256": "0a62ec28be8f7d5d92ebbd359bb02b68864a164be616607edff6e6505d053165"
+          "parsed": 38,
+          "added": 38,
+          "rules_sha256": "5481f38b37336c1961f885207db624549edd503b5c344f7e648334c5dba0bd57"
         },
         {
           "name": "HenryChiao WiFi Calling US",
@@ -826,31 +826,17 @@
         }
       ]
     },
-    "ai/Claude-NetCoffee": {
-      "output": "rules/ai/Claude-NetCoffee.list",
+    "ai/Claude": {
+      "output": "rules/ai/Claude.lsr",
       "rules": 34,
-      "sha256": "141eea31fe36bbf70cb1867264d6c60b560987ea015872f76281fd6c7dba3c92",
+      "sha256": "ae2ea926ab34412aa991954a3c197b6136e6293938c405b3b560cf550d941729",
       "sources": [
         {
-          "name": "Migrated existing ai/Claude-NetCoffee",
-          "source": "overrides/ai/Claude-NetCoffee.list",
+          "name": "NetCoffee Claude and v2fly snapshot",
+          "source": "overrides/ai/Claude.lsr",
           "parsed": 34,
           "added": 34,
           "rules_sha256": "f52902bc432bf74e35024f89271828d0bad8702049700a58176df679e4544abe"
-        }
-      ]
-    },
-    "services/Oracle-Loon": {
-      "output": "rules/services/Oracle-Loon.list",
-      "rules": 25,
-      "sha256": "827ab2bc67083f415a770c2df69c5b4a84875d091d8b85350e684c558b6bef69",
-      "sources": [
-        {
-          "name": "Migrated existing services/Oracle-Loon",
-          "source": "overrides/services/Oracle-Loon.list",
-          "parsed": 25,
-          "added": 25,
-          "rules_sha256": "0c0fe3297f53f1bc25ac0b12dcbd8dce1b7c9bf4f04ebf1e81100f1521837808"
         }
       ]
     },

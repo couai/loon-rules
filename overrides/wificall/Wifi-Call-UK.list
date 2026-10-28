@@ -4,11 +4,8 @@
 # NAME: Wifi-Call-UK
 # DESC: UK SIM Wi-Fi Calling / VoWiFi, merged and deduplicated
 # FORMAT: Loon rule list
-# GENERATED: 2026-06-27
-# TOTAL: 17
-
-# Apple / region check
-DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
+# REVIEWED: 2026-10-28
+# TOTAL: 16
 
 # UDP 500/4500 for UK IPsec Wi-Fi Calling
 AND,((GEOIP,GB),(AND,((PROTOCOL,UDP),(OR,((DEST-PORT,500),(DEST-PORT,4500))))))

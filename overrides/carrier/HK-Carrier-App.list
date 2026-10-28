@@ -4,20 +4,17 @@
 # NAME: HK-Carrier-App
 # DESC: Hong Kong carrier app, account, prepaid and value-added service domains
 # FORMAT: Loon rule list
-# GENERATED: 2026-06-27
-# TOTAL: 41
+# REVIEWED: 2026-10-28
+# TOTAL: 22
 
 # Club SIM / CSL / 1O1O / HKT / PCCW
 DOMAIN-SUFFIX,clubsim.com.hk
 DOMAIN-SUFFIX,hkcsl.com
-DOMAIN-SUFFIX,prepaid.hkcsl.com
 DOMAIN-SUFFIX,1010.com.hk
 DOMAIN-SUFFIX,hkt.com
 DOMAIN-SUFFIX,pccw.com
 DOMAIN-SUFFIX,theclub.com.hk
 DOMAIN-SUFFIX,tapngo.com.hk
-DOMAIN-KEYWORD,clubsim
-DOMAIN-KEYWORD,hkcsl
 
 # 3 Hong Kong / Three / SoSIM / 3Supreme
 DOMAIN-SUFFIX,three.com.hk
@@ -25,42 +22,24 @@ DOMAIN-SUFFIX,hthkh.com
 DOMAIN-SUFFIX,sosimhk.com
 DOMAIN-SUFFIX,3supreme.vip
 DOMAIN-SUFFIX,supreme.vip
-DOMAIN-SUFFIX,wlan.three.com.hk
-DOMAIN-KEYWORD,threehk
-DOMAIN-KEYWORD,3hk
-DOMAIN-KEYWORD,sosim
 
 # SmarTone
 DOMAIN-SUFFIX,smartone.com
 DOMAIN-SUFFIX,smartone.com.hk
-DOMAIN-KEYWORD,smartone
 
 # China Mobile Hong Kong / CMLink
 DOMAIN-SUFFIX,hk.chinamobile.com
 DOMAIN-SUFFIX,cmhk.com
 DOMAIN-SUFFIX,cmlink.com
-DOMAIN-KEYWORD,cmhk
-DOMAIN-KEYWORD,cmlink
-DOMAIN-KEYWORD,mylink
+# CMHK official MyLink links: mylinkapp.hk and the dedicated komect.com host
+DOMAIN-SUFFIX,mylinkapp.hk
+DOMAIN,mylink.komect.com
 
 # HKBN / SUN Mobile
 DOMAIN-SUFFIX,hkbn.net
 DOMAIN-SUFFIX,hkbnes.com
 DOMAIN-SUFFIX,sunmobile.com.hk
-DOMAIN-KEYWORD,hkbn
-DOMAIN-KEYWORD,sunmobile
-
-# Generic Hong Kong carrier app helpers
-DOMAIN-SUFFIX,appsflyer.com
-DOMAIN-SUFFIX,appsflyersdk.com
-DOMAIN-SUFFIX,branch.io
-DOMAIN-SUFFIX,adjust.com
-DOMAIN-SUFFIX,crashlytics.com
-DOMAIN-SUFFIX,firebaseio.com
-DOMAIN-SUFFIX,googleapis.com
-DOMAIN-SUFFIX,gstatic.com
 
 # LOW-CONFIDENCE/DNS-FAILED:
 # DOMAIN-SUFFIX,cmlink.com.hk
-# DOMAIN-SUFFIX,mylinkapp.hk
 # DOMAIN-SUFFIX,nwmobile.com.hk

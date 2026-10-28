@@ -90,7 +90,7 @@
           "name": "Migrated existing HK-Carrier-App.list",
           "path": "overrides/carrier/HK-Carrier-App.list",
           "format": "loon",
-          "min_rules": 41
+          "min_rules": 22
         }
       ],
       "preserve_source": "overrides/carrier/HK-Carrier-App.list"
@@ -102,7 +102,7 @@
           "name": "Migrated existing Wifi-Call-UK.list",
           "path": "overrides/wificall/Wifi-Call-UK.list",
           "format": "loon",
-          "min_rules": 17
+          "min_rules": 16
         },
         {
           "name": "HenryChiao WiFi Calling UK",
@@ -115,7 +115,10 @@
           ]
         }
       ],
-      "preserve_source": "overrides/wificall/Wifi-Call-UK.list"
+      "preserve_source": "overrides/wificall/Wifi-Call-UK.list",
+      "exclude_rules": [
+        "DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com"
+      ]
     },
     "wificall/Wifi-Call-HK": {
       "output": "rules/wificall/Wifi-Call-HK.list",
@@ -165,7 +168,7 @@
           "name": "Migrated existing Wifi-Call-US.list",
           "path": "overrides/wificall/Wifi-Call-US.list",
           "format": "loon",
-          "min_rules": 48
+          "min_rules": 38
         },
         {
           "name": "HenryChiao WiFi Calling US",
@@ -174,7 +177,19 @@
           "min_rules": 10
         }
       ],
-      "preserve_source": "overrides/wificall/Wifi-Call-US.list"
+      "preserve_source": "overrides/wificall/Wifi-Call-US.list",
+      "exclude_rules": [
+        "DOMAIN-SUFFIX,mzstatic.com",
+        "DOMAIN-SUFFIX,cohere.com",
+        "DOMAIN-SUFFIX,ip-api.com",
+        "DOMAIN-SUFFIX,optimizely.com",
+        "DOMAIN-SUFFIX,crashlytics.com",
+        "DOMAIN-SUFFIX,mobilefuse.com",
+        "DOMAIN-SUFFIX,inmobi.com",
+        "DOMAIN-SUFFIX,kochava.com",
+        "DOMAIN-SUFFIX,agkn.com",
+        "DOMAIN-SUFFIX,inner-active.mobi"
+      ]
     },
     "bank/N26": {
       "output": "rules/bank/N26.list",
@@ -529,29 +544,17 @@
       ],
       "preserve_source": "overrides/ai/Claude-NTP.list"
     },
-    "ai/Claude-NetCoffee": {
-      "output": "rules/ai/Claude-NetCoffee.list",
+    "ai/Claude": {
+      "output": "rules/ai/Claude.lsr",
       "sources": [
         {
-          "name": "Migrated existing ai/Claude-NetCoffee",
-          "path": "overrides/ai/Claude-NetCoffee.list",
+          "name": "NetCoffee Claude and v2fly snapshot",
+          "path": "overrides/ai/Claude.lsr",
           "format": "loon",
           "min_rules": 34
         }
       ],
-      "preserve_source": "overrides/ai/Claude-NetCoffee.list"
-    },
-    "services/Oracle-Loon": {
-      "output": "rules/services/Oracle-Loon.list",
-      "sources": [
-        {
-          "name": "Migrated existing services/Oracle-Loon",
-          "path": "overrides/services/Oracle-Loon.list",
-          "format": "loon",
-          "min_rules": 25
-        }
-      ],
-      "preserve_source": "overrides/services/Oracle-Loon.list"
+      "preserve_source": "overrides/ai/Claude.lsr"
     },
     "bank/UK-Banks": {
       "output": "rules/bank/UK-Banks.list",

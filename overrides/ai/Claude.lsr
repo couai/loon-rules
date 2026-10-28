@@ -5,10 +5,10 @@
 # 生成日期：2026-10-27（Asia/Shanghai）
 # 内容：原页面 22 条规则 + sentry 关键词 + geosite:anthropic 去重补充。
 # 此文件不带策略；添加到 [Remote Rule] 时必须显式绑定 policy。
-# 用法：<本文件的 HTTP(S) 地址>, policy=人工智能策略, tag=Claude-NetCoffee, enabled=true
+# 用法：<本文件的 HTTP(S) 地址>, policy=人工智能策略, tag=Claude.lsr, enabled=true
 # 关键词及第三方域名规则会作用于所有应用，不仅 Claude。
 # no-resolve：不为匹配这条 IP 规则额外解析域名；保留源规则语义。
-# NTP 分类另见 Claude-NTP-optional.list，本文件未合并。
+# NTP 分类另见 Claude-NTP.list，本文件未合并。
 # 推荐置于通用 AI/地区规则之前；最终命中仍取决于其他本地和插件规则。
 
 # 核心域名（DOMAIN-SUFFIX 已覆盖所有 *.anthropic.com 子域名）

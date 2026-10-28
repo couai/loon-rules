@@ -10,6 +10,37 @@ from scripts.build import ROOT, build, loon_rule, model_rules, selected_text_rul
 
 
 class RuleTests(unittest.TestCase):
+    def test_carrier_rules_use_explicit_operator_domains(self):
+        rules = text_rules((ROOT / 'rules/carrier/HK-Carrier-App.list').read_text(), 'loon')
+        shared = {'appsflyer.com', 'appsflyersdk.com', 'branch.io', 'adjust.com',
+                  'crashlytics.com', 'firebaseio.com', 'googleapis.com', 'gstatic.com'}
+        for rule in rules:
+            kind, host = rule.split(',')
+            self.assertIn(kind, {'DOMAIN', 'DOMAIN-SUFFIX'})
+            self.assertFalse(any(host == d or host.endswith('.' + d) for d in shared), rule)
+        self.assertIn('DOMAIN-SUFFIX,mylinkapp.hk', rules)
+        self.assertIn('DOMAIN,mylink.komect.com', rules)
+        self.assertNotIn('DOMAIN-SUFFIX,komect.com', rules)
+
+    def test_wifi_rules_do_not_force_shared_services_to_carrier_regions(self):
+        blocked = {
+            'UK': ['gspe1-ssl.ls.apple.com'],
+            'US': ['mzstatic.com', 'cohere.com', 'ip-api.com', 'optimizely.com',
+                   'crashlytics.com', 'mobilefuse.com', 'inmobi.com', 'kochava.com',
+                   'agkn.com', 'inner-active.mobi'],
+        }
+        config = json.loads((ROOT / 'sources.json').read_text())
+        for country, domains in blocked.items():
+            collection = config['collections'][f'wificall/Wifi-Call-{country}']
+            rules = text_rules((ROOT / collection['output']).read_text(), 'loon')
+            for domain in domains:
+                # Exclusions apply after merging every source, including future upstream refreshes.
+                self.assertIn('DOMAIN-SUFFIX,' + domain, collection['exclude_rules'])
+                for rule in rules:
+                    kind, host, *_ = rule.split(',')
+                    if kind in {'DOMAIN', 'DOMAIN-SUFFIX'}:
+                        self.assertFalse(host == domain or host.endswith('.' + domain), rule)
+
     def test_slim_uk_keeps_banks_without_shared_or_separate_services(self):
         rules = text_rules((ROOT / 'rules/bank/UK-Banks.list').read_text(), 'loon')
         for domain in ['co.uk', 'stripe.com', 'stripe.uk', 'lemfi.com', 'trading212.com',

@@ -1,7 +1,6 @@
 # wificall/Wifi-Call-UK — generated; edit sources.json or overrides instead.
 # Sources and attribution: https://github.com/couai/loon-rules/blob/main/NOTICE.md
-# Rules: 33
-DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
+# Rules: 32
 AND,((GEOIP,GB),(AND,((PROTOCOL,UDP),(OR,((DEST-PORT,500),(DEST-PORT,4500))))))
 DOMAIN-KEYWORD,mcc234
 DOMAIN-SUFFIX,entsrv-uk.vodafone.com

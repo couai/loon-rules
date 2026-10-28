@@ -1,6 +1,6 @@
 # 规则整理与上游选择
 
-2026-10-28：迁移现有 WiFi Calling、运营商 App、银行/支付订阅。配置只更换 URL，保留每条订阅的策略、标签和顺序。每项保持独立文件，不把不同国家或不同出口的规则合成一个订阅。
+2026-10-28：迁移现有 WiFi Calling、运营商 App、银行/支付订阅。最初迁移只更换 URL；随后按下述审核结果收窄运营商规则并调整优先级，保留策略。每项保持独立文件，不把不同国家或不同出口的规则合成一个订阅。
 
 ## 目录与维护
 
@@ -8,7 +8,8 @@
 |---|---|---|
 | AI | `rules/AI-Combined.list` | MetaCubeX、models.dev、可莉快照与手工补充 |
 | WiFi Calling 英国/香港/德国/美国 | `rules/wificall/` | 现有规则 + HenryChiao 对应国家规则 |
-| 香港运营商 App | `rules/carrier/` | 现有自维护规则 |
+| 香港运营商 App | `rules/carrier/` | 运营商专属域名；移除泛关键词和共享服务 |
+| Claude 与时间服务 | `rules/ai/Claude.lsr`、`rules/ai/Claude-NTP.list` | NetCoffee、v2fly 与原有补充快照 |
 | 英国银行精简合集 | `rules/bank/UK-Banks.list` | 原快照 + iniwex5，限定银行域名；原有银行品牌关键词/IP |
 | 各银行、支付与交易服务 | `rules/bank/` | 现有规则 + 按服务筛选的公开上游 |
 
@@ -30,19 +31,23 @@
 以下重叠需要区分处理：
 
 - 旧 `UK.list` 的 90 条精简为 `UK-Banks.list` 的 60 条：删除 `co.uk`、Stripe、LemFi、Trading212、共享统计/验证服务等 30 条，保留银行域名、品牌关键词与原 IP 规则。Stripe 使用现有独立订阅并放在 OpenAI 前；LemFi、Trading212 使用各自独立订阅。不要同时启用新旧 UK 列表。
-- 香港运营商 App 列表包含 `googleapis.com`、`gstatic.com`、Appsflyer、Branch、Adjust 等共享域名，并且位于 WiFi Calling 和银行规则前；其中 `wlan.three.com.hk` 会优先走运营商 App 的策略。
-- WiFi Calling US 包含一些 App/统计辅助域名。此次保留原有覆盖，未擅自缩减。
+## 运营商范围与优先级
 
-以后收窄这些范围时，应作为独立分流调整，先用实际流量验证，避免把地址迁移和出口行为变更混在一起。
+四份 WiFi Calling 按 UK、HK、DE、US 的原顺序放在 HK-Carrier-App 前，各自保留原地区策略。这样 `wlan.three.com.hk` 先命中香港 WiFi Calling，随后 `three.com.hk` 才覆盖运营商 App。域名规则仍遵循 Loon 的类型和来源优先级，提前订阅不会使 IP 规则越过域名规则。
+
+HK-Carrier-App 保留 22 条明确域名，移除 11 个泛关键词、8 个共享服务后缀与 2 个已被父域名覆盖的子域名。MyLink 使用 `mylinkapp.hk` 及精确主机 `mylink.komect.com`，不扩大到整个 `komect.com`；依据 CMHK 的 [MySIM 文件](https://www.hk.chinamobile.com/upload/onlineshop/2026-04-15/5g-mysim-local-package-sc.pdf)和 [MyLink 活动文件](https://www.hk.chinamobile.com/upload/onlineshop/2026-01-15/tnc_slash_5G_Student_Referral_Program_115.pdf)。Appsflyer、Branch、Adjust、Crashlytics、Firebase、Google API/静态资源等共享平台交由其他规则处理。
+
+WiFi Calling UK 移除 `gspe1-ssl.ls.apple.com`；US 移除 `mzstatic.com`、`cohere.com`、`ip-api.com`、`optimizely.com`、`crashlytics.com`、`mobilefuse.com`、`inmobi.com`、`kochava.com`、`agkn.com`、`inner-active.mobi`。这仅撤销强制地区出口，不添加拦截；Apple 资源、AI 与通用服务恢复由后续规则匹配。`exclude_rules` 对合并后的全部来源生效，测试防止这些共享服务重新混入。ePDG/IMS、运营商认证、现有 IP 和国家 UDP 条件继续保留。
 
 ## Claude 与 Oracle 订阅
 
-Claude-NetCoffee、Claude-NTP、Oracle-Loon 已迁入独立 `rules/ai/`、`rules/services/` 文件，分别保留 34、116、25 条规则；客户端原位置替换 URL，保留原策略。
+`Claude.lsr` 由原 Claude-NetCoffee 重命名，完整保留 34 条规则及人工智能策略，在客户端替换原 NetCoffee 位置；移除另一个重复的可莉 Claude.lsr。`Claude-NTP.list` 保留 116 条及原位置。
+
+Oracle 仅保留可莉 `https://rule.kelee.one/Loon/Oracle.lsr`，使用原 DIRECT 策略；仓库内重复的 Oracle-Loon 输出、来源和生成配置已删除。GoogleVoice、AppStore、OneDrive 继续保留。
 
 单条网站和钱包补充由客户端 `[Rule]` 管理，仓库不保留拆分文件或生成配置。本地广告例外、个人端点、DNS 引导和场景网段也由客户端维护。Loon 的本地 > 插件 > 订阅来源优先级见 [官方说明](https://nsloon.app/docs/Rule/)。
 
-Claude-NTP 是通用时间服务列表，含国内和国外地址，并非只有 Claude 或海外服务；继续沿用原人工智能策略，未擅自删减。Claude-NetCoffee 保留原第三方域名/关键词、IP-ASN 与 no-resolve；Oracle 保留 `.java` 和 `.oracle` 顶级域名后缀。它们是自维护快照，编辑 overrides 后由六小时工作流重建；不会自动重新抓取 NetCoffee 网页。
+Claude-NTP 是通用时间服务列表，含国内和国外地址，并非只有 Claude 或海外服务；继续沿用原人工智能策略，未擅自删减。Claude.lsr 保留原第三方域名/关键词、IP-ASN 与 no-resolve。Claude 文件是自维护快照，编辑 overrides 后由六小时工作流重建；不会自动重新抓取 NetCoffee 网页。
 
-Oracle-Loon 与本机另一份 Oracle.lsr 的当前 25 条内容相同。保留两份及原顺序后，请求可继续先命中 Oracle.lsr 的 DIRECT；以新订阅实际加载内容确认迁移生效，不声称它一定抢先命中。
 
 验证包括公开订阅可读取、每项保留原规则、Loon 实际加载内容及代表性分流请求。WiFi Calling 的分流验证不等于 SIM 注册或实际通话成功。

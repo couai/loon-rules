@@ -14,13 +14,13 @@
 https://raw.githubusercontent.com/couai/loon-rules/main/rules/AI-Combined.list, policy=人工智能策略, tag=AI-Combined, enabled=true
 ```
 
-替换原 AI.lsr 时保留原来的策略绑定和顺序，放在 China、GEOIP 和 FINAL 等通用规则前面。原有 OpenAI、Claude、Gemini、Claude-Coffee、Claude-NTP 等专用规则可以继续保留。仓库只提供规则，不包含节点或完整个人配置。
+替换原 AI.lsr 时保留原来的策略绑定和顺序，放在 China、GEOIP 和 FINAL 等通用规则前面。OpenAI、Gemini、Claude-NTP 等专用规则可以继续保留；Claude 使用本仓库的 `rules/ai/Claude.lsr`，无需同时启用另一份 Claude.lsr。仓库只提供规则，不包含节点或完整个人配置。
 
 ## 来源与覆盖
 
 ### WiFi Calling、运营商与银行规则
 
-已迁入的 WiFi Calling、运营商和银行规则：[WiFi Calling](rules/wificall/)（UK/HK/DE/US）、[香港运营商 App](rules/carrier/)、[银行与支付](rules/bank/)。每份保持独立，方便继续绑定原来的地区策略。另外提供 [Claude 专项](rules/ai/) 和 [Oracle 规则](rules/services/Oracle-Loon.list)。英国银行推荐使用精简的 [UK-Banks.list](rules/bank/UK-Banks.list)，旧 UK.list 仅保留兼容。目录、公开上游筛选与重叠项见 [规则整理说明](docs/rule-organization.md)。
+已迁入的 WiFi Calling、运营商和银行规则：[WiFi Calling](rules/wificall/)（UK/HK/DE/US）、[香港运营商 App](rules/carrier/)、[银行与支付](rules/bank/)。每份保持独立，方便继续绑定原来的地区策略。另外提供 [Claude 专项](rules/ai/)。Oracle 继续使用可莉 Oracle.lsr，本仓库不再生成重复订阅。英国银行推荐使用精简的 [UK-Banks.list](rules/bank/UK-Banks.list)，旧 UK.list 仅保留兼容。目录、公开上游筛选与重叠项见 [规则整理说明](docs/rule-organization.md)。
 
 单条网站和钱包补充在客户端 `[Rule]` 中维护，不生成独立订阅。
 
