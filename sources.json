@@ -1,0 +1,69 @@
+{
+  "collections": {
+    "AI-Combined": {
+      "output": "rules/AI-Combined.list",
+      "sources": [
+        {
+          "name": "MetaCubeX overseas AI",
+          "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.list",
+          "format": "domain-list",
+          "min_rules": 150
+        },
+        {
+          "name": "models.dev explicit API hosts",
+          "url": "https://codeload.github.com/anomalyco/models.dev/tar.gz/refs/heads/dev",
+          "format": "models-tar",
+          "min_rules": 100,
+          "exclude_providers": [
+            "*-cn",
+            "*-cn-*",
+            "tencent-*",
+            "volcengine*",
+            "zhipuai*",
+            "stepfun",
+            "stepfun-step-plan",
+            "xiaomi",
+            "deepseek",
+            "bailing",
+            "drun",
+            "ebcloud",
+            "kuae-cloud-coding-plan",
+            "longcat",
+            "moark",
+            "qiniu-ai",
+            "scnet-token-plan",
+            "sensenova"
+          ],
+          "exclude_suffixes": [
+            "cn"
+          ],
+          "exclude_hosts": [
+            "api.cloudflare.com",
+            "api.infomaniak.com"
+          ]
+        },
+        {
+          "name": "KeLee local AI snapshot (2026-10-28)",
+          "path": "snapshots/KeLee-AI-20261028.list",
+          "format": "loon",
+          "min_rules": 240
+        },
+        {
+          "name": "Manual AI additions",
+          "path": "overrides/AI.list",
+          "format": "loon",
+          "min_rules": 4
+        }
+      ],
+      "exclude_rules": [],
+      "required_rules": [
+        "DOMAIN-SUFFIX,muse.ai",
+        "DOMAIN-SUFFIX,lovable.dev",
+        "DOMAIN-SUFFIX,v0.dev",
+        "DOMAIN-SUFFIX,augmentcode.com",
+        "DOMAIN-SUFFIX,claude.ai",
+        "DOMAIN-SUFFIX,chatgpt.com"
+      ]
+    }
+  }
+}
