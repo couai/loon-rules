@@ -39,7 +39,7 @@
 
 香港补充 SmarTone `mnc006.mcc454` 与 CMHK `mnc012.mcc454` 的 ePDG 后缀，美国补充 Verizon `wo.vzwwo.com`，均由 override 和 `required_rules` 保留。CMHK 依据编号、命名标准与 DNS 核查，仍需实卡验证。英国 EE 的 `mnc030`、`mnc034` 已由现有 `mcc234` 覆盖。依据及待核查项见 [运营商核查记录](wifi-carrier-review-proposal.md)。
 
-UK-Carrier-App 收录 6 条，DE-Carrier-App 收录 7 条。UK WiFi 的 `ee.co.uk`、`giffgaff.com`、`voxi.co.uk` 与 DE WiFi 的 `vodafone.de` 迁入对应 App 合集，并在 WiFi 合并后排除以避免上游重新带回。保留 `ct.ee.co.uk`、ePDG/IMS、现有 IP 与开通辅助规则。新合集分别使用英国手动选择、德国手动策略；本机 `o2online.de` 的个人自建例外优先，香港 App 继续使用香港手动策略。CMLink 英港共用主机，保留现行香港规则，不将整个 `cmlink.com` 重复加入英国合集。
+UK-Carrier-App 收录 6 条，DE-Carrier-App 收录 7 条。UK WiFi 的 `ee.co.uk`、`giffgaff.com`、`voxi.co.uk` 与 DE WiFi 的 `vodafone.de` 迁入对应 App 合集，并在 WiFi 合并后排除以避免上游重新带回。保留 `ct.ee.co.uk`、ePDG/IMS、现有 IP 与开通辅助规则。新合集分别使用英国手动选择、德国手动策略；本机已移除 `o2online.de` 的个人自建覆盖规则，现由 DE App 订阅使用德国手动策略；香港 App 继续使用香港手动策略。CMLink 英港共用主机，保留现行香港规则，不将整个 `cmlink.com` 重复加入英国合集。
 
 德国列表补充 `DOMAIN-SUFFIX,epdg.epc.mnc001.mcc262.pub.3gppnetwork.org`，修复该网关原先落到 FINAL 的遗漏，继续使用德国手动策略。此项由本地补充源及 `required_rules` 保留，不扩大为匹配全部 `mcc262` 的关键词。
 

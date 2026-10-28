@@ -1,6 +1,6 @@
 # German carrier account, billing, top-up and App domains; reviewed 2026-10-28.
 # Evidence: docs/wifi-carrier-review-proposal.md
-# Client-local policy exceptions (including O2) still take precedence.
+# Client-local policy exceptions, if configured, take precedence.
 DOMAIN-SUFFIX,telekom.de
 DOMAIN,accounts.login.idm.telekom.com
 DOMAIN,account.idm.telekom.com

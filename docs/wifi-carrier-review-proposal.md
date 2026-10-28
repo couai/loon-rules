@@ -33,7 +33,7 @@
 - 精确主机 `accounts.login.idm.telekom.com`：[Telekom 官方登录说明](https://www.telekom.de/datenschutzhinweise/view-plain/047.pdf)。
 - 精确主机 `account.idm.telekom.com`、`meinkonto.telekom-dienste.de`、`meinmagenta.go.link`：MeinMagenta 官方页面直接链接。不扩大到 `telekom.com` 或共享 `go.link` 根域。
 - `DOMAIN-SUFFIX,vodafone.de`：[MeinVodafone](https://www.vodafone.de/hilfe/meinvodafone.html)，从 DE WiFi 移入。
-- `DOMAIN-SUFFIX,o2online.de`：[Mein O2](https://www.o2online.de/mein-o2/)。本机已有本地规则指定「个人自建」，继续优先于远程 DE App 策略。
+- `DOMAIN-SUFFIX,o2online.de`：[Mein O2](https://www.o2online.de/mein-o2/)。本机后续按用户要求移除「个人自建」本地覆盖，现由 DE App 订阅使用德国手动策略。
 
 ## 顺序、例外与验证
 
