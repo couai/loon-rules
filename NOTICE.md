@@ -16,6 +16,8 @@
 - **MetaCubeX/meta-rules-dat**：另使用 Kraken 分类，来源许可见上文。
 - **xOS/Config**、**LeiyuG/Surge**：分别使用 N26、Coinbase/Bitget 的公开规则，并进行域名或类型筛选；原项目链接见 [整理说明](docs/rule-organization.md)。这些来源及 iniwex5/tools 的仓库 API 未标示许可证，本仓库不为它们另行授予 MIT 许可。
 
+新增 UK/DE 运营商 App 域名依据运营商官方账户与 App 页面核查；SmarTone、Verizon 网关参考 TP-Link/HPE 官方说明，CMHK 使用 ITU 分配与 ETSI 标准核查。来源链接见 [运营商核查记录](docs/wifi-carrier-review-proposal.md)。
+
 各分类输出保留来源署名链接；没有将第三方规则整体重新授权为本项目原创代码的许可。
 
 ## Claude 与 UK-Banks 来源

@@ -5,7 +5,7 @@
 # DESC: US SIM Wi-Fi Calling / VoWiFi, common carrier ePDG and carrier helper rules
 # FORMAT: Loon rule list
 # REVIEWED: 2026-10-28
-# TOTAL: 38
+# TOTAL: 39
 
 # UDP 500/4500 for US IPsec Wi-Fi Calling
 AND,((GEOIP,US),(AND,((PROTOCOL,UDP),(OR,((DEST-PORT,500),(DEST-PORT,4500))))))
@@ -40,6 +40,8 @@ DOMAIN-SUFFIX,att.net
 IP-CIDR,107.64.0.0/10,no-resolve
 
 # Verizon US
+# https://arubanetworking.hpe.com/techdocs/CLI-Bank/Content/instant/sh-wifical-dns-patrns.htm
+DOMAIN-SUFFIX,wo.vzwwo.com
 DOMAIN-SUFFIX,epdg.epc.mnc480.mcc311.pub.3gppnetwork.org
 DOMAIN-SUFFIX,ss.epdg.epc.mnc480.mcc311.pub.3gppnetwork.org
 DOMAIN-SUFFIX,ss.epdg.epc.geo.mnc480.mcc311.pub.3gppnetwork.org

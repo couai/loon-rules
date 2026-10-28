@@ -20,7 +20,7 @@ https://raw.githubusercontent.com/couai/loon-rules/main/rules/AI-Combined.list, 
 
 ### WiFi Calling、运营商与银行规则
 
-已迁入的 WiFi Calling、运营商和银行规则：[WiFi Calling](rules/wificall/)（UK/HK/DE/US）、[香港运营商 App](rules/carrier/)、[银行与支付](rules/bank/)。每份保持独立，方便继续绑定原来的地区策略。另外提供 [Claude 专项](rules/ai/)。Oracle 继续使用可莉 Oracle.lsr，本仓库不再生成重复订阅。英国银行推荐使用精简的 [UK-Banks.list](rules/bank/UK-Banks.list)，旧 UK.list 仅保留兼容。目录、公开上游筛选与重叠项见 [规则整理说明](docs/rule-organization.md)。
+已迁入的 WiFi Calling、运营商和银行规则：[WiFi Calling](rules/wificall/)（UK/HK/DE/US）、[运营商 App](rules/carrier/)（HK/UK/DE）、[银行与支付](rules/bank/)。每份保持独立，方便继续绑定原来的地区策略。另外提供 [Claude 专项](rules/ai/)。Oracle 继续使用可莉 Oracle.lsr，本仓库不再生成重复订阅。英国银行推荐使用精简的 [UK-Banks.list](rules/bank/UK-Banks.list)，旧 UK.list 仅保留兼容。目录、公开上游筛选与重叠项见 [规则整理说明](docs/rule-organization.md)。
 
 单条网站和钱包补充在客户端 `[Rule]` 中维护，不生成独立订阅。
 

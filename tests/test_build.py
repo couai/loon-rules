@@ -11,7 +11,8 @@ from scripts.build import ROOT, build, loon_rule, model_rules, selected_text_rul
 
 class RuleTests(unittest.TestCase):
     def test_carrier_rules_use_explicit_operator_domains(self):
-        rules = text_rules((ROOT / 'rules/carrier/HK-Carrier-App.list').read_text(), 'loon')
+        rules = [rule for path in (ROOT / 'rules/carrier').glob('*.list')
+                 for rule in text_rules(path.read_text(), 'loon')]
         shared = {'appsflyer.com', 'appsflyersdk.com', 'branch.io', 'adjust.com',
                   'crashlytics.com', 'firebaseio.com', 'googleapis.com', 'gstatic.com'}
         for rule in rules:
@@ -20,7 +21,8 @@ class RuleTests(unittest.TestCase):
             self.assertFalse(any(host == d or host.endswith('.' + d) for d in shared), rule)
         self.assertIn('DOMAIN-SUFFIX,mylinkapp.hk', rules)
         self.assertIn('DOMAIN,mylink.komect.com', rules)
-        self.assertNotIn('DOMAIN-SUFFIX,komect.com', rules)
+        for domain in ['komect.com', 'go.link', 'telekom.com']:
+            self.assertNotIn('DOMAIN-SUFFIX,' + domain, rules)
 
     def test_wifi_rules_do_not_force_shared_services_to_carrier_regions(self):
         blocked = {

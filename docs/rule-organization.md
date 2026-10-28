@@ -8,7 +8,7 @@
 |---|---|---|
 | AI | `rules/AI-Combined.list` | MetaCubeX、models.dev、可莉快照与手工补充 |
 | WiFi Calling 英国/香港/德国/美国 | `rules/wificall/` | 现有规则 + HenryChiao 对应国家规则 |
-| 香港运营商 App | `rules/carrier/` | 运营商专属域名；移除泛关键词和共享服务 |
+| 香港/英国/德国运营商 App | `rules/carrier/` | 运营商专属域名；移除泛关键词和共享服务 |
 | Claude 与时间服务 | `rules/ai/Claude.lsr`、`rules/ai/Claude-NTP.list` | NetCoffee、v2fly 与原有补充快照 |
 | 英国银行精简合集 | `rules/bank/UK-Banks.list` | 原快照 + iniwex5，限定银行域名；原有银行品牌关键词/IP |
 | 各银行、支付与交易服务 | `rules/bank/` | 现有规则 + 按服务筛选的公开上游 |
@@ -35,7 +35,11 @@
 
 ## 运营商范围与优先级
 
-四份 WiFi Calling 按 UK、HK、DE、US 的原顺序放在 HK-Carrier-App 前，各自保留原地区策略。这样 `wlan.three.com.hk` 先命中香港 WiFi Calling，随后 `three.com.hk` 才覆盖运营商 App。域名规则仍遵循 Loon 的类型和来源优先级，提前订阅不会使 IP 规则越过域名规则。
+四份 WiFi Calling 按 UK、HK、DE、US 的原顺序放在 HK/UK/DE-Carrier-App 前，各自保留原地区策略。这样 `wlan.three.com.hk` 先命中香港 WiFi Calling，随后 `three.com.hk` 才覆盖运营商 App。域名规则仍遵循 Loon 的类型和来源优先级，提前订阅不会使 IP 规则越过域名规则。
+
+香港补充 SmarTone `mnc006.mcc454` 与 CMHK `mnc012.mcc454` 的 ePDG 后缀，美国补充 Verizon `wo.vzwwo.com`，均由 override 和 `required_rules` 保留。CMHK 依据编号、命名标准与 DNS 核查，仍需实卡验证。英国 EE 的 `mnc030`、`mnc034` 已由现有 `mcc234` 覆盖。依据及待核查项见 [运营商核查记录](wifi-carrier-review-proposal.md)。
+
+UK-Carrier-App 收录 6 条，DE-Carrier-App 收录 7 条。UK WiFi 的 `ee.co.uk`、`giffgaff.com`、`voxi.co.uk` 与 DE WiFi 的 `vodafone.de` 迁入对应 App 合集，并在 WiFi 合并后排除以避免上游重新带回。保留 `ct.ee.co.uk`、ePDG/IMS、现有 IP 与开通辅助规则。新合集分别使用英国手动选择、德国手动策略；本机 `o2online.de` 的个人自建例外优先，香港 App 继续使用香港手动策略。CMLink 英港共用主机，保留现行香港规则，不将整个 `cmlink.com` 重复加入英国合集。
 
 德国列表补充 `DOMAIN-SUFFIX,epdg.epc.mnc001.mcc262.pub.3gppnetwork.org`，修复该网关原先落到 FINAL 的遗漏，继续使用德国手动策略。此项由本地补充源及 `required_rules` 保留，不扩大为匹配全部 `mcc262` 的关键词。
 

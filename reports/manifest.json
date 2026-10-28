@@ -137,23 +137,51 @@
         }
       ]
     },
+    "carrier/UK-Carrier-App": {
+      "output": "rules/carrier/UK-Carrier-App.list",
+      "rules": 6,
+      "sha256": "164f0952ae104f26c98222fccb15d1e1b54465eb6e59dac70f48d95937c93356",
+      "sources": [
+        {
+          "name": "Reviewed UK carrier App domains",
+          "source": "overrides/carrier/UK-Carrier-App.list",
+          "parsed": 6,
+          "added": 6,
+          "rules_sha256": "623143f8d6a330bfb481605fcac3a3214197a006a034e4a7c61eadee0ce1c0df"
+        }
+      ]
+    },
+    "carrier/DE-Carrier-App": {
+      "output": "rules/carrier/DE-Carrier-App.list",
+      "rules": 7,
+      "sha256": "ccb77c82ecbdb0110ad8b32dcb891a99d2501e9f23592ffec55a05fd17dcf177",
+      "sources": [
+        {
+          "name": "Reviewed DE carrier App domains",
+          "source": "overrides/carrier/DE-Carrier-App.list",
+          "parsed": 7,
+          "added": 7,
+          "rules_sha256": "b73ac50c1115187527a2ceb4103663a0d671ca4e89cc71c082ea312a284851a4"
+        }
+      ]
+    },
     "wificall/Wifi-Call-UK": {
       "output": "rules/wificall/Wifi-Call-UK.list",
-      "rules": 32,
-      "sha256": "bba86a6d4b1594645adf8cd7b8faa9ecb34497945ae8d3e98a35c5158c5207e5",
+      "rules": 29,
+      "sha256": "0ae41fc47ebff1568d5c2e4795c9206aebd2a7f31e7eef397f6281b56cdd2a78",
       "sources": [
         {
           "name": "Migrated existing Wifi-Call-UK.list",
           "source": "overrides/wificall/Wifi-Call-UK.list",
-          "parsed": 16,
-          "added": 16,
-          "rules_sha256": "81d46b317046aed534e3cb6dd9e448657f7a00ecab6e1c1296b52a35241ba2fe"
+          "parsed": 14,
+          "added": 14,
+          "rules_sha256": "f46342d63038bfb8dd665c51a3defccb84afc6dd732fe950f997e9f5db0bcf88"
         },
         {
           "name": "HenryChiao WiFi Calling UK",
           "source": "https://raw.githubusercontent.com/HenryChiao/the_clash_ruleset/main/The_Location_rule-set/Wi-Fi_Calling_rule-set/wificalling-uk.list",
           "parsed": 26,
-          "added": 16,
+          "added": 15,
           "rules_sha256": "09e54958d8049e440b65ee23e07279cdcf46366b31bca656f8c21d4206f4eb78",
           "skipped": {
             "DOMAIN-SUFFIX,epdg.epc.mnc001.mcc230.pub.3gppnetwork.org": "explicit source exclusion",
@@ -164,15 +192,15 @@
     },
     "wificall/Wifi-Call-HK": {
       "output": "rules/wificall/Wifi-Call-HK.list",
-      "rules": 18,
-      "sha256": "e03eca4c2bde48a3b74df7b56de07f22602da3ee8ea422a652315e6c8e890e13",
+      "rules": 20,
+      "sha256": "04e36b3e8ad0fd02667fff3793b571c1ed66753fc562cb7966311371f06c4fc5",
       "sources": [
         {
           "name": "Migrated existing Wifi-Call-HK.list",
           "source": "overrides/wificall/Wifi-Call-HK.list",
-          "parsed": 9,
-          "added": 9,
-          "rules_sha256": "ce9010325f3bb99b85ac3423b89495ffe833ea096a238719e70d6038e638f36a"
+          "parsed": 11,
+          "added": 11,
+          "rules_sha256": "d70a4c667add277956a117635532a7e64fd2c30df601a316e3849f491345d8ba"
         },
         {
           "name": "HenryChiao WiFi Calling HK",
@@ -185,8 +213,8 @@
     },
     "wificall/Wifi-Call-DE": {
       "output": "rules/wificall/Wifi-Call-DE.list",
-      "rules": 22,
-      "sha256": "6ffde082dde0c4ea63fe591eaf1e261480bfeb2580e25bc64d8f20ab03ae9658",
+      "rules": 21,
+      "sha256": "c7d03699f71cb65f93b0cc39840879f127e80b030a855928961ca9a65638e2c8",
       "sources": [
         {
           "name": "Migrated existing Wifi-Call-DE.list",
@@ -199,7 +227,7 @@
           "name": "HenryChiao WiFi Calling DE",
           "source": "https://raw.githubusercontent.com/HenryChiao/the_clash_ruleset/main/The_Location_rule-set/Wi-Fi_Calling_rule-set/wificalling-de.list",
           "parsed": 20,
-          "added": 16,
+          "added": 15,
           "rules_sha256": "5b27bdfa98af76115d5a065a94b732de34782a16caeac2873812d69541b772e0",
           "skipped": {
             "DOMAIN-SUFFIX,n26.com": "explicit source exclusion",
@@ -211,15 +239,15 @@
     },
     "wificall/Wifi-Call-US": {
       "output": "rules/wificall/Wifi-Call-US.list",
-      "rules": 51,
-      "sha256": "a8a506259d8f33cee3bf39780941772ef13431c87e959c70a43ec869fb5f1573",
+      "rules": 52,
+      "sha256": "11e6e679945754bfc5c5f955d8a65972ae97013e437b3be35f978fc5b44835f3",
       "sources": [
         {
           "name": "Migrated existing Wifi-Call-US.list",
           "source": "overrides/wificall/Wifi-Call-US.list",
-          "parsed": 38,
-          "added": 38,
-          "rules_sha256": "5481f38b37336c1961f885207db624549edd503b5c344f7e648334c5dba0bd57"
+          "parsed": 39,
+          "added": 39,
+          "rules_sha256": "fa3794552f84ece47f498d1fb9563094b719bd7f1285705fb970a08a285a3182"
         },
         {
           "name": "HenryChiao WiFi Calling US",

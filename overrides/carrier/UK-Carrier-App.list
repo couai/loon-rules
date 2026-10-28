@@ -1,0 +1,10 @@
+# UK carrier account, billing, top-up and App domains; reviewed 2026-10-28.
+# Evidence: docs/wifi-carrier-review-proposal.md
+# Shared payment/analytics platforms are intentionally outside this collection.
+# CMLink uses a shared global host; do not add cmlink.com to a second country list.
+DOMAIN-SUFFIX,ee.co.uk
+DOMAIN-SUFFIX,giffgaff.com
+DOMAIN-SUFFIX,voxi.co.uk
+DOMAIN-SUFFIX,vodafone.co.uk
+DOMAIN-SUFFIX,o2.co.uk
+DOMAIN-SUFFIX,three.co.uk

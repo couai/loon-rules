@@ -95,6 +95,30 @@
       ],
       "preserve_source": "overrides/carrier/HK-Carrier-App.list"
     },
+    "carrier/UK-Carrier-App": {
+      "output": "rules/carrier/UK-Carrier-App.list",
+      "sources": [
+        {
+          "name": "Reviewed UK carrier App domains",
+          "path": "overrides/carrier/UK-Carrier-App.list",
+          "format": "loon",
+          "min_rules": 6
+        }
+      ],
+      "preserve_source": "overrides/carrier/UK-Carrier-App.list"
+    },
+    "carrier/DE-Carrier-App": {
+      "output": "rules/carrier/DE-Carrier-App.list",
+      "sources": [
+        {
+          "name": "Reviewed DE carrier App domains",
+          "path": "overrides/carrier/DE-Carrier-App.list",
+          "format": "loon",
+          "min_rules": 7
+        }
+      ],
+      "preserve_source": "overrides/carrier/DE-Carrier-App.list"
+    },
     "wificall/Wifi-Call-UK": {
       "output": "rules/wificall/Wifi-Call-UK.list",
       "sources": [
@@ -102,7 +126,7 @@
           "name": "Migrated existing Wifi-Call-UK.list",
           "path": "overrides/wificall/Wifi-Call-UK.list",
           "format": "loon",
-          "min_rules": 16
+          "min_rules": 14
         },
         {
           "name": "HenryChiao WiFi Calling UK",
@@ -117,7 +141,10 @@
       ],
       "preserve_source": "overrides/wificall/Wifi-Call-UK.list",
       "exclude_rules": [
-        "DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com"
+        "DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com",
+        "DOMAIN-SUFFIX,ee.co.uk",
+        "DOMAIN-SUFFIX,giffgaff.com",
+        "DOMAIN-SUFFIX,voxi.co.uk"
       ]
     },
     "wificall/Wifi-Call-HK": {
@@ -127,7 +154,7 @@
           "name": "Migrated existing Wifi-Call-HK.list",
           "path": "overrides/wificall/Wifi-Call-HK.list",
           "format": "loon",
-          "min_rules": 9
+          "min_rules": 11
         },
         {
           "name": "HenryChiao WiFi Calling HK",
@@ -136,7 +163,11 @@
           "min_rules": 10
         }
       ],
-      "preserve_source": "overrides/wificall/Wifi-Call-HK.list"
+      "preserve_source": "overrides/wificall/Wifi-Call-HK.list",
+      "required_rules": [
+        "DOMAIN-SUFFIX,epdg.epc.mnc006.mcc454.pub.3gppnetwork.org",
+        "DOMAIN-SUFFIX,epdg.epc.mnc012.mcc454.pub.3gppnetwork.org"
+      ]
     },
     "wificall/Wifi-Call-DE": {
       "output": "rules/wificall/Wifi-Call-DE.list",
@@ -162,6 +193,9 @@
       "preserve_source": "overrides/wificall/Wifi-Call-DE.list",
       "required_rules": [
         "DOMAIN-SUFFIX,epdg.epc.mnc001.mcc262.pub.3gppnetwork.org"
+      ],
+      "exclude_rules": [
+        "DOMAIN-SUFFIX,vodafone.de"
       ]
     },
     "wificall/Wifi-Call-US": {
@@ -171,7 +205,7 @@
           "name": "Migrated existing Wifi-Call-US.list",
           "path": "overrides/wificall/Wifi-Call-US.list",
           "format": "loon",
-          "min_rules": 38
+          "min_rules": 39
         },
         {
           "name": "HenryChiao WiFi Calling US",
@@ -192,6 +226,9 @@
         "DOMAIN-SUFFIX,kochava.com",
         "DOMAIN-SUFFIX,agkn.com",
         "DOMAIN-SUFFIX,inner-active.mobi"
+      ],
+      "required_rules": [
+        "DOMAIN-SUFFIX,wo.vzwwo.com"
       ]
     },
     "bank/N26": {

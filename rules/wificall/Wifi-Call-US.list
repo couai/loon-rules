@@ -1,6 +1,6 @@
 # wificall/Wifi-Call-US — generated; edit sources.json or overrides instead.
 # Sources and attribution: https://github.com/couai/loon-rules/blob/main/NOTICE.md
-# Rules: 51
+# Rules: 52
 AND,((GEOIP,US),(AND,((PROTOCOL,UDP),(OR,((DEST-PORT,500),(DEST-PORT,4500))))))
 DOMAIN-KEYWORD,mcc310
 DOMAIN-KEYWORD,mcc311
@@ -25,6 +25,7 @@ DOMAIN-SUFFIX,ss.epdg.epc.geo.mnc410.mcc310.pub.3gppnetwork.org
 DOMAIN-SUFFIX,att.com
 DOMAIN-SUFFIX,att.net
 IP-CIDR,107.64.0.0/10,no-resolve
+DOMAIN-SUFFIX,wo.vzwwo.com
 DOMAIN-SUFFIX,epdg.epc.mnc480.mcc311.pub.3gppnetwork.org
 DOMAIN-SUFFIX,ss.epdg.epc.mnc480.mcc311.pub.3gppnetwork.org
 DOMAIN-SUFFIX,ss.epdg.epc.geo.mnc480.mcc311.pub.3gppnetwork.org

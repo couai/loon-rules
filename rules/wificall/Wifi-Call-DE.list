@@ -1,6 +1,6 @@
 # wificall/Wifi-Call-DE — generated; edit sources.json or overrides instead.
 # Sources and attribution: https://github.com/couai/loon-rules/blob/main/NOTICE.md
-# Rules: 22
+# Rules: 21
 DOMAIN-SUFFIX,epdg.epc.mnc001.mcc262.pub.3gppnetwork.org
 DOMAIN-SUFFIX,epdg.epc.mnc002.mcc262.pub.3gppnetwork.org
 IP-CIDR,139.7.117.168/30,no-resolve
@@ -12,7 +12,6 @@ DOMAIN-SUFFIX,epdg.epc.drz1.vodafone-ip.de
 DOMAIN,ims.mnc002.mcc262.3gppnetwork.org
 DOMAIN-SUFFIX,vodafone-dns.net
 DOMAIN-SUFFIX,vodafone-ip.de
-DOMAIN-SUFFIX,vodafone.de
 IP-CIDR,139.7.117.0/24,no-resolve
 IP-CIDR,139.7.117.160/28,no-resolve
 IP-CIDR,139.7.96.0/19,no-resolve

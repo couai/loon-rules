@@ -5,7 +5,7 @@
 # DESC: UK SIM Wi-Fi Calling / VoWiFi, merged and deduplicated
 # FORMAT: Loon rule list
 # REVIEWED: 2026-10-28
-# TOTAL: 16
+# TOTAL: 14
 
 # UDP 500/4500 for UK IPsec Wi-Fi Calling
 AND,((GEOIP,GB),(AND,((PROTOCOL,UDP),(OR,((DEST-PORT,500),(DEST-PORT,4500))))))
@@ -26,11 +26,9 @@ IP-CIDR,148.252.160.0/19,no-resolve
 DOMAIN,vfgb.idemia.io
 
 # CMLink UK / EE
-DOMAIN-SUFFIX,ee.co.uk
 DOMAIN-SUFFIX,ct.ee.co.uk
 IP-CIDR,46.68.0.0/17,no-resolve
 IP-CIDR,31.94.0.0/16,no-resolve
 
 # Giffgaff
-DOMAIN-SUFFIX,giffgaff.com
 IP-CIDR,87.194.0.0/16,no-resolve
