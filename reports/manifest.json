@@ -2,8 +2,8 @@
   "collections": {
     "AI-Combined": {
       "output": "rules/AI-Combined.list",
-      "rules": 440,
-      "sha256": "4d7adda9a72962da9cb55a8360f63e2177f2ec40e74dfdbf43c45cb54709aac0",
+      "rules": 441,
+      "sha256": "c1ec04ca316c7aeec900d1a4a4cf96f78d26a42c73e3dd057ac2cffd3033c140",
       "sources": [
         {
           "name": "MetaCubeX overseas AI",
@@ -15,9 +15,9 @@
         {
           "name": "models.dev explicit API hosts",
           "source": "https://codeload.github.com/anomalyco/models.dev/tar.gz/refs/heads/dev",
-          "parsed": 168,
-          "added": 162,
-          "rules_sha256": "04e8736daad07cf8a76bde60a973d7eef08862268cfb105b68b2e22831282c5e",
+          "parsed": 169,
+          "added": 163,
+          "rules_sha256": "e19e6964c6c7e65da49c41b0b7340d04a0c57bf436eb9b182bccbcbaa4c873de",
           "skipped": {
             "aihubmix": "SDK default; no explicit API URL",
             "alibaba-cn": "excluded provider",

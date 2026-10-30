@@ -1,6 +1,6 @@
 # AI-Combined — generated; edit sources.json or overrides instead.
 # Sources and attribution: https://github.com/couai/loon-rules/blob/main/NOTICE.md
-# Rules: 440
+# Rules: 441
 DOMAIN,servd-anthropic-website.b-cdn.net
 DOMAIN,copilot-proxy.githubusercontent.com
 DOMAIN,copilot-workspace.githubnext.com
@@ -268,6 +268,7 @@ DOMAIN,api.gmi-serving.com
 DOMAIN,api.greenpt.ai
 DOMAIN,ai-gateway.helicone.ai
 DOMAIN,inference.hetzner.com
+DOMAIN,api.withhopper.com
 DOMAIN,api.hpc-ai.com
 DOMAIN,router.huggingface.co
 DOMAIN,hyper.charm.land
