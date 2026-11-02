@@ -3,14 +3,14 @@
     "AI-Combined": {
       "output": "rules/AI-Combined.list",
       "rules": 442,
-      "sha256": "a661fe3bcd9bbb49463dfeeb31328ab117a7a7c59d876065a1f0ccd1139d08e5",
+      "sha256": "ba37f5fb69c811d9789d703e2da392b3a55a332e95c71aed64c069290f74272c",
       "sources": [
         {
           "name": "MetaCubeX overseas AI",
           "source": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.list",
           "parsed": 213,
           "added": 213,
-          "rules_sha256": "9d2e050bad5bbc66e0228227372087b6519e36620b64a1a860d32d522c989320"
+          "rules_sha256": "1274d0c762499ace3f72311a36ea961140909ffe54146f07d14daf256a87e46e"
         },
         {
           "name": "models.dev explicit API hosts",
