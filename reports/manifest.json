@@ -47,6 +47,7 @@
             "groq": "SDK default; no explicit API URL",
             "infomaniak": "excluded host",
             "kimi-code-plan-cn": "excluded provider",
+            "klingai": "SDK default; no explicit API URL",
             "kuae-cloud-coding-plan": "excluded provider",
             "lmstudio": "IP address; no domain rule",
             "longcat": "excluded provider",
