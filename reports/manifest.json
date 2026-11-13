@@ -2,22 +2,22 @@
   "collections": {
     "AI-Combined": {
       "output": "rules/AI-Combined.list",
-      "rules": 446,
-      "sha256": "201e82c687036758aa23a9d40a4d359be228aa7fb69102f132543851a80a0c26",
+      "rules": 447,
+      "sha256": "f634ba3e4a8ae1c237407035c986763f9254511ff2785c25343517af93852a0e",
       "sources": [
         {
           "name": "MetaCubeX overseas AI",
           "source": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.list",
           "parsed": 217,
           "added": 217,
-          "rules_sha256": "1ee8b52b85228fb534712ba2f00cda72b97656da476f31268e29b4fa958c0c14"
+          "rules_sha256": "380ab49a4dd95a3c30c7b7934ca2881d44ef0f2d12c5f4e8d9b73615b3deb7ce"
         },
         {
           "name": "models.dev explicit API hosts",
           "source": "https://codeload.github.com/anomalyco/models.dev/tar.gz/refs/heads/dev",
-          "parsed": 170,
-          "added": 164,
-          "rules_sha256": "1185add74c2af5d4c49c129dd68af7e752e6f1e8fb79377a50119c8fc8bf26bc",
+          "parsed": 171,
+          "added": 165,
+          "rules_sha256": "03eb474bc3ee585335337c5def2b44006e8d5e2b6fe1eee85c2e4b2d9c8b8e3b",
           "skipped": {
             "aihubmix": "SDK default; no explicit API URL",
             "alibaba-cn": "excluded provider",
