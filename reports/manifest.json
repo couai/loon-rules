@@ -2,8 +2,8 @@
   "collections": {
     "AI-Combined": {
       "output": "rules/AI-Combined.list",
-      "rules": 447,
-      "sha256": "c585a98514051ae190743b120f894adbfd6e97211aafda121a44ca33e5caeae1",
+      "rules": 543,
+      "sha256": "c399caa33e09c0a41696166328ef7f09eb5296856ecf1fbedcf89bec6e629c6c",
       "sources": [
         {
           "name": "MetaCubeX overseas AI",
@@ -15,9 +15,9 @@
         {
           "name": "models.dev explicit API hosts",
           "source": "https://codeload.github.com/anomalyco/models.dev/tar.gz/refs/heads/dev",
-          "parsed": 171,
-          "added": 165,
-          "rules_sha256": "03eb474bc3ee585335337c5def2b44006e8d5e2b6fe1eee85c2e4b2d9c8b8e3b",
+          "parsed": 266,
+          "added": 260,
+          "rules_sha256": "ad9599a6837d135183dd10c9d94253c0770d70bc4bd7525ebb08f5a5d49e9a51",
           "skipped": {
             "aihubmix": "SDK default; no explicit API URL",
             "alibaba-cn": "excluded provider",
@@ -35,6 +35,7 @@
             "cloudflare-workers-ai": "excluded host",
             "cohere": "SDK default; no explicit API URL",
             "databricks": "hostname requires user configuration",
+            "decisionmodels": "SDK default; no explicit API URL",
             "deepinfra": "SDK default; no explicit API URL",
             "deepseek": "excluded provider",
             "drun": "excluded provider",
@@ -92,7 +93,7 @@
           "name": "KeLee local AI snapshot (2026-10-28)",
           "source": "snapshots/KeLee-AI-20261028.list",
           "parsed": 245,
-          "added": 62,
+          "added": 63,
           "rules_sha256": "9069e4a7fbd4fe0ec3bba143446097a30f3c9143d5cb62dbf3071f778713b742"
         },
         {
