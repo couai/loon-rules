@@ -77,6 +77,7 @@
             "tencent-token-plan": "excluded provider",
             "tencent-tokenhub": "excluded provider",
             "togetherai": "SDK default; no explicit API URL",
+            "typesafe": "SDK default; no explicit API URL",
             "venice": "SDK default; no explicit API URL",
             "vercel": "SDK default; no explicit API URL",
             "volcengine-coding-plan": "excluded provider",
