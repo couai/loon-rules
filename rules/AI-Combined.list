@@ -1,6 +1,6 @@
 # AI-Combined — generated; edit sources.json or overrides instead.
 # Sources and attribution: https://github.com/couai/loon-rules/blob/main/NOTICE.md
-# Rules: 541
+# Rules: 542
 DOMAIN,openaiapi-site.azureedge.net
 DOMAIN,openaiassets.blob.core.windows.net
 DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
@@ -381,6 +381,7 @@ DOMAIN,obscurify.ai
 DOMAIN,inference.generativeai.us-chicago-1.oci.oraclecloud.com
 DOMAIN,api.ofox.ai
 DOMAIN,ollama.com
+DOMAIN,api.openai.com
 DOMAIN,chatgpt.com
 DOMAIN,opencode.ai
 DOMAIN,api.openreason.app
