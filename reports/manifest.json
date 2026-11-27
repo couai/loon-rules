@@ -74,6 +74,7 @@
             "stepfun-step-plan": "excluded provider",
             "stepfun": "excluded provider",
             "tencent-coding-plan": "excluded provider",
+            "tencent-token-plan-intl": "excluded provider",
             "tencent-token-plan": "excluded provider",
             "tencent-tokenhub": "excluded provider",
             "togetherai": "SDK default; no explicit API URL",
